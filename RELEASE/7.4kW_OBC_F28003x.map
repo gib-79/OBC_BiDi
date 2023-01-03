@@ -1,0 +1,2009 @@
+******************************************************************************
+             TMS320C2000 Linker PC v22.6.0                     
+******************************************************************************
+>> Linked Tue Dec 20 15:55:17 2022
+
+OUTPUT FILE NAME:   <7.4kW_OBC_F28003x.out>
+ENTRY POINT SYMBOL: "code_start"  address: 00080000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  BOOT_RSVD             00000002   00000126  00000000  00000126  RWIX
+  RAMM0                 00000128   000002d8  00000000  000002d8  RWIX
+  RAMM1                 00000400   000003f8  000003f8  00000000  RWIX
+  CLA1_MSGRAMLOW        00001480   00000080  00000000  00000080  RWIX
+  CLA1_MSGRAMHIGH       00001500   00000080  00000000  00000080  RWIX
+  RAMLS0LS1             00008000   00001000  000004ca  00000b36  RWIX
+  RAMLS2LS3LS4LS5       00009000   00002000  000006ea  00001916  RWIX
+  RAMLS6                0000b000   00000800  00000000  00000800  RWIX
+  RAMLS7                0000b800   00000800  00000000  00000800  RWIX
+  RAMGS0GS1             0000c000   00002000  00000c02  000013fe  RWIX
+  RAMGS2                0000e000   00001000  00000a08  000005f8  RWIX
+  RAMGS3                0000f000   00000ff8  000000d0  00000f28  RWIX
+  BEGIN                 00080000   00000002  00000002  00000000  RWIX
+  FLASH_BANK0_SEC0      00080002   00000ffe  00000000  00000ffe  RWIX
+  FLASH_BANK0_SEC1      00081000   00001000  0000071e  000008e2  RWIX
+  FLASH_BANK0_SEC2_3_4  00082000   00004000  0000309b  00000f65  RWIX
+  FLASH_BANK0_SEC6      00086000   00001000  000006ea  00000916  RWIX
+  FLASH_BANK0_SEC7      00087000   00001000  000005c5  00000a3b  RWIX
+  FLASH_BANK0_SEC8      00088000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC9      00089000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC10     0008a000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC11     0008b000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC12     0008c000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC13     0008d000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC14     0008e000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC15     0008f000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC0      00090000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC1      00091000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC2      00092000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC3      00093000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC4      00094000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC5      00095000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC6      00096000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC7      00097000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC8      00098000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC9      00099000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC10     0009a000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC11     0009b000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC12     0009c000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC13     0009d000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC14     0009e000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC15     0009f000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC0      000a0000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC1      000a1000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC2      000a2000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC3      000a3000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC4      000a4000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC5      000a5000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC6      000a6000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC7      000a7000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC8      000a8000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC9      000a9000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC10     000aa000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC11     000ab000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC12     000ac000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC13     000ad000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC14     000ae000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC15     000af000   00000ff0  00000000  00000ff0  RWIX
+  SECURE_ROM            003f2000   00006000  00000000  00006000  RWIX
+  BOOTROM               003f8000   00007fc0  00000000  00007fc0  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.stack     0    00000400    000003f8     UNINITIALIZED
+                  00000400    000003f8     --HOLE--
+
+codestart 
+*          0    00080000    00000002     
+                  00080000    00000002     f28003x_codestartbranch.obj (codestart)
+
+.cinit     0    000816d0    00000054     
+                  000816d0    00000021     (.cinit..data.load) [load image, compression = lzss]
+                  000816f1    0000000b     (.cinit.controlVariables.load) [load image, compression = lzss]
+                  000816fc    00000006     (__TI_handler_table)
+                  00081702    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  00081706    00000004     (.cinit..scratchpad.load) [load image, compression = zero_init]
+                  0008170a    00000004     (.cinit.SFRA_F32_Data.load) [load image, compression = zero_init]
+                  0008170e    00000002     --HOLE-- [fill = 0]
+                  00081710    00000014     (__TI_cinit_table)
+
+.init_array 
+*          0    00081000    00000000     UNINITIALIZED
+
+.bss       0    0000e000    000009ae     UNINITIALIZED
+                  0000e000    000000c8     clllc.obj (.bss:CLLLC_dBuff1)
+                  0000e0c8    000000c8     clllc.obj (.bss:CLLLC_dBuff2)
+                  0000e190    000000c8     clllc.obj (.bss:CLLLC_dBuff3)
+                  0000e258    000000c8     clllc.obj (.bss:CLLLC_dBuff4)
+                  0000e320    000000c8     ttplpfc.obj (.bss:TTPLPFC_dBuff1)
+                  0000e3e8    000000c8     ttplpfc.obj (.bss:TTPLPFC_dBuff2)
+                  0000e4b0    000000c8     ttplpfc.obj (.bss:TTPLPFC_dBuff3)
+                  0000e578    000000c8     ttplpfc.obj (.bss:TTPLPFC_dBuff4)
+                  0000e640    00000060     clllc.obj (.bss)
+                  0000e6a0    00000020     sfra_gui_scicomms_driverlib.obj (.bss:SFRA_GUI_arrayGetList)
+                  0000e6c0    00000060     ttplpfc.obj (.bss)
+                  0000e720    0000003c     ttplpfc.obj (.bss:TTPLPFC_freqVect)
+                  0000e75c    0000003c     ttplpfc.obj (.bss:TTPLPFC_olMagVect)
+                  0000e798    0000003c     ttplpfc.obj (.bss:TTPLPFC_olPhaseVect)
+                  0000e7d4    0000003c     ttplpfc.obj (.bss:TTPLPFC_plantMagVect)
+                  0000e810    0000003c     ttplpfc.obj (.bss:TTPLPFC_plantPhaseVect)
+                  0000e84c    00000030     obc_7_4kw_main.obj (.bss)
+                  0000e87c    00000004     obc_7_4kw_main.obj (.bss:vTimer0)
+                  0000e880    00000022     sfra_gui_scicomms_driverlib.obj (.bss)
+                  0000e8a2    00000020     sfra_gui_scicomms_driverlib.obj (.bss:SFRA_GUI_cmdDispatcher)
+                  0000e8c2    00000020     sfra_gui_scicomms_driverlib.obj (.bss:SFRA_GUI_dataSetList)
+                  0000e8e2    00000020     sfra_gui_scicomms_driverlib.obj (.bss:SFRA_GUI_varGetList)
+                  0000e902    00000020     sfra_gui_scicomms_driverlib.obj (.bss:SFRA_GUI_varSetBtnList)
+                  0000e922    00000020     sfra_gui_scicomms_driverlib.obj (.bss:SFRA_GUI_varSetSldrList)
+                  0000e942    00000020     sfra_gui_scicomms_driverlib.obj (.bss:SFRA_GUI_varSetTxtList)
+                  0000e962    0000001a     clllc_hal.obj (.bss)
+                  0000e97c    00000004     obc_7_4kw_main.obj (.bss:vTimer1)
+                  0000e980    00000018     ttplpfc_hal.obj (.bss)
+                  0000e998    00000009     SFO_v8_fpu_lib_build_c28_driverlib_eabi.lib : SFO_v8_fpu_lib_build_c28_driverlib.obj (.bss:MEP_SF)
+                  0000e9a1    00000006     sfra_gui_scicomms_driverlib.obj (.bss:SFRA_GUI_cmdPacket)
+                  0000e9a7    00000005     SFO_v8_fpu_lib_build_c28_driverlib_eabi.lib : SFO_v8_fpu_lib_build_c28_driverlib.obj (.bss)
+                  0000e9ac    00000002     clllc.obj (.bss:retain)
+
+.data      0    0000e9ae    00000038     UNINITIALIZED
+                  0000e9ae    00000012     clllc_hal.obj (.data:ePWM)
+                  0000e9c0    0000000e     obc_7_4kw_main.obj (.data)
+                  0000e9ce    0000000c     clllc.obj (.data)
+                  0000e9da    00000006     rts2800_fpu64_eabi.lib : exit.c.obj (.data)
+                  0000e9e0    00000002                            : _lock.c.obj (.data:_lock)
+                  0000e9e2    00000002                            : _lock.c.obj (.data:_unlock)
+                  0000e9e4    00000001     SFO_v8_fpu_lib_build_c28_driverlib_eabi.lib : SFO_v8_fpu_lib_build_c28_driverlib.obj (.data)
+                  0000e9e5    00000001     clllc_hal.obj (.data)
+
+.reset     0    003fffc0    00000000     DSECT
+
+.scratchpad 
+*          0    0000848e    0000003c     UNINITIALIZED
+                  0000848e    00000028     clllc_clatasks.obj (.scratchpad:background:Cla1Prog:Cla1BackgroundTask)
+                  000084b6    00000014     clllc_clatasks.obj (.scratchpad:Cla1Prog:Cla1Task1)
+                  000084b6    00000002     clllc_clatasks.obj (.scratchpad:Cla1Prog:Cla1Task2)
+                  000084b6    00000002     clllc_clatasks.obj (.scratchpad:Cla1Prog:Cla1Task3)
+                  000084b6    00000002     clllc_clatasks.obj (.scratchpad:Cla1Prog:Cla1Task4)
+                  000084b6    00000002     clllc_clatasks.obj (.scratchpad:Cla1Prog:Cla1Task5)
+                  000084b6    00000002     clllc_clatasks.obj (.scratchpad:Cla1Prog:Cla1Task6)
+                  000084b6    00000002     clllc_clatasks.obj (.scratchpad:Cla1Prog:Cla1Task7)
+
+dclfuncs   0    00081640    0000008d     
+                  00081640    00000037     DCL_PI_C1.obj (dclfuncs)
+                  00081677    00000001     --HOLE-- [fill = 0]
+                  00081678    0000002f     DCL_DF22_C1.obj (dclfuncs)
+                  000816a7    00000001     --HOLE-- [fill = 0]
+                  000816a8    00000025     DCL_PI_C4.obj (dclfuncs)
+
+Cla1Prog   0    00086000    000006ea     RUN ADDR = 00009000
+                  00086000    000005a4     clllc_clatasks.obj (Cla1Prog:Cla1BackgroundTask)
+                  000865a4    000000da     clllc_clatasks.obj (Cla1Prog:Cla1Task1)
+                  0008667e    00000012     clllc_clatasks.obj (Cla1Prog:Cla1Task2)
+                  00086690    00000012     clllc_clatasks.obj (Cla1Prog:Cla1Task3)
+                  000866a2    00000012     clllc_clatasks.obj (Cla1Prog:Cla1Task4)
+                  000866b4    00000012     clllc_clatasks.obj (Cla1Prog:Cla1Task5)
+                  000866c6    00000012     clllc_clatasks.obj (Cla1Prog:Cla1Task6)
+                  000866d8    00000012     clllc_clatasks.obj (Cla1Prog:Cla1Task7)
+
+.TI.ramfunc 
+*          0    00081000    0000004f     RUN ADDR = 0000c000
+                  00081000    0000004b     driverlib.lib : flash.obj (.TI.ramfunc:Flash_initModule)
+                  0008104b    00000004                   : sysctl.obj (.TI.ramfunc)
+
+ramfuncs   0    0008104f    000005ee     RUN ADDR = 0000c04f
+                  0008104f    000005ee     obc_7_4kw_main.obj (ramfuncs:ISR3)
+
+controlVariables 
+*          0    00008000    0000048e     UNINITIALIZED
+                  00008000    0000028a     ttplpfc.obj (controlVariables:uninit)
+                  0000828a    0000002a     clllc.obj (controlVariables:retain:uninit)
+                  000082b4    0000000a     ttplpfc.obj (controlVariables:retain:init)
+                  000082be    00000002     clllc.obj (controlVariables:retain:init)
+                  000082c0    000000e4     clllc.obj (controlVariables)
+                  000083a4    0000001c     --HOLE--
+                  000083c0    000000ce     ttplpfc.obj (controlVariables:retain:uninit)
+
+SFRA_F32_Data 
+*          0    0000ea00    00000022     UNINITIALIZED
+                  0000ea00    00000022     sfra_f64_tmu_eabi.lib : sfra_f32_tmu_config_reset.obj (SFRA_F32_Data)
+
+FPUmathTables 
+*          0    0000f000    000000d0     
+                  0000f000    000000d0     rts2800_fpu32_fast_supplement_eabi.lib : logtable_f32.obj (FPUmathTables)
+
+.const_cla 
+*          0    00008000    00000000     UNINITIALIZED
+
+isrcodefuncs 
+*          0    00087000    000005c5     RUN ADDR = 0000c640
+                  00087000    000005a3     obc_7_4kw_main.obj (isrcodefuncs:ISR2_primToSecPowerFlow)
+                  000875a3    00000022     obc_7_4kw_main.obj (isrcodefuncs:ISR2_secToPrimPowerFlow)
+
+dclfuncs   0    000875c5    00000000     UNINITIALIZEDRUN ADDR = 0000cc05
+
+.text      0    00082000    0000309b     
+                  00082000    00000570     ttplpfc.obj (.text:TTPLPFC_globalVariablesInit)
+                  00082570    0000037d     clllc_hal.obj (.text:CLLLC_HAL_setupSynchronousRectificationAction)
+                  000828ed    00000266     clllc.obj (.text:CLLLC_initGlobalVariables)
+                  00082b53    00000200     sfra_f64_tmu_eabi.lib : sfra_f32_tmu_background.obj (.text)
+                  00082d53    000001f1     SFO_v8_fpu_lib_build_c28_driverlib_eabi.lib : SFO_v8_fpu_lib_build_c28_driverlib.obj (.text)
+                  00082f44    000001e9     sfra_f64_tmu_eabi.lib : sfra_f32_tmu_config_reset.obj (.text)
+                  0008312d    000001e5     clllc.obj (.text:CLLLC_runISR3)
+                  00083312    0000016e     clllc_hal.obj (.text:CLLLC_HAL_setupPWM)
+                  00083480    0000011d     ttplpfc.obj (.text:TTPLPFC_setupSFRA)
+                  0008359d    00000108     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_sendData)
+                  000836a5    00000108     driverlib.lib : sysctl.obj (.text:SysCtl_setClock)
+                  000837ad    000000ff                   : sysctl.obj (.text:SysCtl_isPLLValid)
+                  000838ac    000000f9     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_config)
+                  000839a5    000000de     clllc_hal.obj (.text:CLLLC_HAL_setupTrigForADC)
+                  00083a83    000000d3     device.obj (.text:Device_enableAllPeripherals)
+                  00083b56    000000c7     clllc_hal.obj (.text:CLLLC_HAL_setupHRPWMinUpDownCountModeWithDeadBand)
+                  00083c1d    000000c7     clllc_hal.obj (.text:CLLLC_HAL_setupPWMpins)
+                  00083ce4    000000bc     clllc.obj (.text:CLLLC_changeSynchronousRectifierPwmBehavior)
+                  00083da0    000000b2     clllc_hal.obj (.text:CLLLC_HAL_setupBoardProtection)
+                  00083e52    000000af     ttplpfc_hal.obj (.text:TTPLPFC_HAL_setupTrigForADC)
+                  00083f01    000000a3     obc_7_4kw.obj (.text:OBC_7_4KW_setupInterrupt)
+                  00083fa4    0000009e     clllc_hal.obj (.text:CLLLC_HAL_setupGPIOs)
+                  00084042    00000092     clllc_hal.obj (.text:CLLLC_HAL_setupCLA)
+                  000840d4    00000091     ttplpfc_hal.obj (.text:TTPLPFC_HAL_setupBoardProtection)
+                  00084165    0000008e     clllc_hal.obj (.text:CLLLC_HAL_setupADC)
+                  000841f3    0000007b     clllc_hal.obj (.text:CLLLC_HAL_setupHRPWMinUpDownCount2ChAsymmetricMode)
+                  0008426e    00000078     ttplpfc_hal.obj (.text:TTPLPFC_HAL_setupPWM)
+                  000842e6    00000073     ttplpfc_hal.obj (.text:TTPLPFC_HAL_setupADC)
+                  00084359    00000071     clllc_hal.obj (.text:CLLLC_HAL_setupDevice)
+                  000843ca    00000071     ttplpfc_hal.obj (.text:TTPLPFC_HAL_setupPWM_UpDownCountWithDeadband)
+                  0008443b    00000070     ttplpfc.obj (.text:TTPLPFC_computeNotchFltrCoeff)
+                  000844ab    0000006f     ttplpfc_hal.obj (.text:TTPLPFC_HAL_setPinsAsPWM)
+                  0008451a    00000067     sfra_f64_tmu_eabi.lib : sfra_f32_tmu_collect.obj (.text)
+                  00084581    00000062     rts2800_fpu64_eabi.lib : s_tanf.c.obj (.text)
+                  000845e3    00000055     ttplpfc_hal.obj (.text:TTPLPFC_HAL_setupCMPSS)
+                  00084638    0000004f     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_lifePulseTsk)
+                  00084687    0000004c     clllc.obj (.text:CLLLC_updateBoardStatus)
+                  000846d3    00000045     device.obj (.text:Device_init)
+                  00084718    00000045     driverlib.lib : gpio.obj (.text:GPIO_setAnalogMode)
+                  0008475d    00000041                   : interrupt.obj (.text:Interrupt_initModule)
+                  0008479e    0000003f                   : gpio.obj (.text:GPIO_setPadConfig)
+                  000847dd    0000003c     ttplpfc_hal.obj (.text:TTPLPFC_HAL_setupPWMforTrip)
+                  00084819    00000039     clllc_hal.obj (.text:CLLLC_HAL_setupSynchronousRectificationActionDebug)
+                  00084852    00000038     rts2800_fpu32_fast_supplement_eabi.lib : log_f32.obj (.text)
+                  0008488a    00000037     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_getCmdByte)
+                  000848c1    00000036     driverlib.lib : interrupt.obj (.text:Interrupt_enable)
+                  000848f7    00000034     clllc_hal.obj (.text:CLLLC_HAL_setupPWMinUpDownCountMode)
+                  0008492b    00000030     driverlib.lib : gpio.obj (.text:GPIO_setPinConfig)
+                  0008495b    0000002f     clllc_hal.obj (.text:CLLLC_HAL_setupECAPforDutyCapture)
+                  0008498a    0000002f     driverlib.lib : sysctl.obj (.text:SysCtl_selectXTAL)
+                  000849b9    0000002f                   : xbar.obj (.text:XBAR_getInputFlagStatus)
+                  000849e8    0000002e     rts2800_fpu64_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00084a16    0000002d     driverlib.lib : sysctl.obj (.text:SysCtl_selectOscSource)
+                  00084a43    0000002b     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_getData)
+                  00084a6e    0000002b     driverlib.lib : xbar.obj (.text:XBAR_setEPWMMuxConfig)
+                  00084a99    0000002b     rts2800_fpu64_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  00084ac4    0000002a     clllc_hal.obj (.text:CLLLC_HAL_setupECAPinPWMMode)
+                  00084aee    00000029     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_setData32)
+                  00084b17    00000029     rts2800_fpu64_eabi.lib : exit.c.obj (.text)
+                  00084b40    00000028     driverlib.lib : xbar.obj (.text:XBAR_clearInputFlag)
+                  00084b68    00000028     obc_7_4kw_main.obj (.text:main)
+                  00084b90    00000026     sfra_f64_tmu_eabi.lib : sfra_f32_tmu_inject.obj (.text)
+                  00084bb6    00000025     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_echoCmdByte)
+                  00084bdb    00000025     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_echoSizeByte)
+                  00084c00    00000025     driverlib.lib : xbar.obj (.text:XBAR_setOutputMuxConfig)
+                  00084c25    00000023                   : sci.obj (.text:SCI_setConfig)
+                  00084c48    00000022                   : gpio.obj (.text:GPIO_setMasterCore)
+                  00084c6a    00000022                   : gpio.obj (.text:GPIO_setQualificationMode)
+                  00084c8c    00000021                   : memcfg.obj (.text:MemCfg_setLSRAMMasterSel)
+                  00084cad    00000021     obc_7_4kw.obj (.text:OBC_7_4KW_initGlobalVariables)
+                  00084cce    00000020     driverlib.lib : gpio.obj (.text:GPIO_setDirectionMode)
+                  00084cee    00000020     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_cmdInterpreter)
+                  00084d0e    00000020     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_echoDataByte)
+                  00084d2e    0000001f     clllc_hal.obj (.text:CLLLC_HAL_setupECAPforGaNTemp)
+                  00084d4d    0000001f     obc_7_4kw.obj (.text:OBC_7_4KW_setupPWM)
+                  00084d6c    0000001f     driverlib.lib : sysctl.obj (.text:SysCtl_pollX1Counter)
+                  00084d8b    0000001d     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_getDataByte)
+                  00084da8    0000001d     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_getSizeByte)
+                  00084dc5    0000001d     rts2800_fpu64_eabi.lib : memcpy.c.obj (.text)
+                  00084de2    0000001c     driverlib.lib : cla.obj (.text:CLA_setTriggerSource)
+                  00084dfe    0000001c                   : sci.obj (.text:SCI_clearInterruptStatus)
+                  00084e1a    0000001c     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_packWord)
+                  00084e36    0000001c     driverlib.lib : sysctl.obj (.text:SysCtl_selectXTALSingleEnded)
+                  00084e52    0000001a                   : adc.obj (.text:ADC_setOffsetTrimAll)
+                  00084e6c    0000001a                   : sci.obj (.text:SCI_enableInterrupt)
+                  00084e86    00000019                   : adc.obj (.text:ADC_setVREF)
+                  00084e9f    00000019                   : cmpss.obj (.text:CMPSS_configFilterHigh)
+                  00084eb8    00000019                   : cmpss.obj (.text:CMPSS_configFilterLow)
+                  00084ed1    00000019     rts2800_fpu32_fast_supplement_eabi.lib : div_f32.obj (.text)
+                  00084eea    00000019     rts2800_fpu64_eabi.lib : boot28.asm.obj (.text)
+                  00084f03    00000018     obc_7_4kw_main.obj (.text:A0)
+                  00084f1b    00000018     obc_7_4kw_main.obj (.text:B0)
+                  00084f33    00000015     driverlib.lib : cmpss.obj (.text:CMPSS_configLatchOnPWMSYNC)
+                  00084f48    00000015                   : interrupt.obj (.text:Interrupt_initVectorTable)
+                  00084f5d    00000011     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_setButton)
+                  00084f6e    00000011     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_setSlider)
+                  00084f7f    00000011     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_setText)
+                  00084f90    00000010     device.obj (.text:Device_initGPIO)
+                  00084fa0    0000000f     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_runSerialHostComms)
+                  00084faf    0000000f     ttplpfc.obj (.text:TTPLPFC_runCoefficientsUpdate)
+                  00084fbe    0000000e     ttplpfc_hal.obj (.text:TTPLPFC_HAL_setupRelayGPIO)
+                  00084fcc    0000000c     clllc_hal.obj (.text:CLLLC_HAL_toggleLED1)
+                  00084fd8    0000000c     ttplpfc.obj (.text:TTPLPFC_updateBoardStatus)
+                  00084fe4    0000000c     rts2800_fpu64_eabi.lib : args_main.c.obj (.text)
+                  00084ff0    0000000b     obc_7_4kw_main.obj (.text:A1)
+                  00084ffb    0000000b     obc_7_4kw.obj (.text:OBC_7_4KW_setupActiveSyncRectCLLLC)
+                  00085006    0000000b     obc_7_4kw.obj (.text:OBC_7_4KW_setupBoardProtection)
+                  00085011    0000000b     ttplpfc.obj (.text:TTPLPFC_runSFRABackGroundTasks)
+                  0008501c    0000000a     obc_7_4kw_main.obj (.text:B1)
+                  00085026    0000000a     obc_7_4kw_main.obj (.text:B3)
+                  00085030    00000009     clllc_hal.obj (.text:CLLLC_HAL_disablePWMClkCounting)
+                  00085039    00000009     obc_7_4kw.obj (.text:OBC_7_4KW_setupADC)
+                  00085042    00000009     rts2800_fpu64_eabi.lib : _lock.c.obj (.text)
+                  0008504b    00000008     clllc_hal.obj (.text:CLLLC_HAL_enablePWMClkCounting)
+                  00085053    00000008     rts2800_fpu64_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
+                  0008505b    00000008     f28003x_codestartbranch.obj (.text)
+                  00085063    00000007     rts2800_fpu64_eabi.lib : memset.c.obj (.text)
+                  0008506a    00000006     obc_7_4kw_main.obj (.text:B2)
+                  00085070    00000006     driverlib.lib : cputimer.obj (.text:CPUTimer_setEmulationMode)
+                  00085076    00000006     rts2800_fpu64_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI)
+                  0008507c    00000005     clllc.obj (.text:CLLLC_setBuildLevelIndicatorVariable)
+                  00085081    00000005     obc_7_4kw.obj (.text:OBC_7_4KW_setupGPIO)
+                  00085086    00000005     sfra_gui_scicomms_driverlib.obj (.text:SFRA_GUI_spareTsk08)
+                  0008508b    00000005     ttplpfc.obj (.text:TTPLPFC_setLabIndicatorVariable)
+                  00085090    00000004     driverlib.lib : interrupt.obj (.text:Interrupt_defaultHandler)
+                  00085094    00000002                   : interrupt.obj (.text:Interrupt_illegalOperationHandler)
+                  00085096    00000002                   : interrupt.obj (.text:Interrupt_nmiHandler)
+                  00085098    00000002     rts2800_fpu64_eabi.lib : pre_init.c.obj (.text)
+                  0008509a    00000001                            : startup.c.obj (.text)
+
+MODULE SUMMARY
+
+       Module                                   code    ro data   rw data
+       ------                                   ----    -------   -------
+    .\
+       obc_7_4kw_main.obj                       6115    0         70     
+       obc_7_4kw.obj                            263     0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   6378    0         70     
+                                                                         
+    .\clllc\
+       clllc_clatasks.obj                       3540    0         72     
+       clllc_hal.obj                            2997    0         45     
+       clllc.obj                                1368    0         1182   
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   7905    0         1299   
+                                                                         
+    .\device\
+       device.obj                               296     0         0      
+       f28003x_codestartbranch.obj              10      0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   306     0         0      
+                                                                         
+    .\libraries\DCL\
+       DCL_PI_C1.obj                            55      0         0      
+       DCL_DF22_C1.obj                          47      0         0      
+       DCL_PI_C4.obj                            37      0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   139     0         0      
+                                                                         
+    .\libraries\sfra\
+       sfra_gui_scicomms_driverlib.obj          1026    0         264    
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   1026    0         264    
+                                                                         
+    .\ttplpfc\
+       ttplpfc.obj                              1832    0         2062   
+       ttplpfc_hal.obj                          938     0         24     
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   2770    0         2086   
+                                                                         
+    ../libraries/FPUfastRTS/rts2800_fpu32_fast_supplement_eabi.lib
+       logtable_f32.obj                         0       208       0      
+       log_f32.obj                              56      0         0      
+       div_f32.obj                              25      0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   81      208       0      
+                                                                         
+    ../libraries/sfra/sfra_f64_tmu_eabi.lib
+       sfra_f32_tmu_config_reset.obj            489     0         34     
+       sfra_f32_tmu_background.obj              512     0         0      
+       sfra_f32_tmu_collect.obj                 103     0         0      
+       sfra_f32_tmu_inject.obj                  38      0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   1142    0         34     
+                                                                         
+    C:/Users/gerar/workspace_v12/7.4kW_OBC_F28003x/device/driverlib/ccs/Release/driverlib.lib
+       sysctl.obj                               678     0         0      
+       gpio.obj                                 280     0         0      
+       xbar.obj                                 167     0         0      
+       flash.obj                                150     0         0      
+       interrupt.obj                            148     0         0      
+       sci.obj                                  89      0         0      
+       cmpss.obj                                71      0         0      
+       adc.obj                                  51      0         0      
+       memcfg.obj                               33      0         0      
+       cla.obj                                  28      0         0      
+       cputimer.obj                             6       0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   1701    0         0      
+                                                                         
+    C:/Users/gerar/workspace_v12/7.4kW_OBC_F28003x/libraries/SFO/SFO_v8_fpu_lib_build_c28_driverlib_eabi.lib
+       SFO_v8_fpu_lib_build_c28_driverlib.obj   497     0         15     
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   497     0         15     
+                                                                         
+    C:\ti\ccs1210\ccs\tools\compiler\ti-cgt-c2000_22.6.0.LTS\lib\rts2800_fpu64_eabi.lib
+       s_tanf.c.obj                             98      0         0      
+       exit.c.obj                               41      0         6      
+       copy_decompress_lzss.c.obj               46      0         0      
+       autoinit.c.obj                           43      0         0      
+       memcpy.c.obj                             29      0         0      
+       boot28.asm.obj                           25      0         0      
+       _lock.c.obj                              9       0         4      
+       args_main.c.obj                          12      0         0      
+       copy_decompress_none.c.obj               8       0         0      
+       memset.c.obj                             7       0         0      
+       copy_zero_init.c.obj                     6       0         0      
+       pre_init.c.obj                           2       0         0      
+       startup.c.obj                            1       0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   327     0         10     
+                                                                         
+       Stack:                                   0       0         1016   
+       Linker Generated:                        0       82        0      
+    +--+----------------------------------------+-------+---------+---------+
+       Grand Total:                             22272   290       4794   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00081710 records: 5, size/record: 4, table size: 20
+	.data: load addr=000816d0, load size=00000021 bytes, run addr=0000e9ae, run size=00000038 bytes, compression=lzss
+	controlVariables: load addr=000816f1, load size=0000000b bytes, run addr=00008000, run size=0000048e bytes, compression=lzss
+	.bss: load addr=00081702, load size=00000004 bytes, run addr=0000e000, run size=000009ae bytes, compression=zero_init
+	.scratchpad: load addr=00081706, load size=00000004 bytes, run addr=0000848e, run size=0000003c bytes, compression=zero_init
+	SFRA_F32_Data: load addr=0008170a, load size=00000004 bytes, run addr=0000ea00, run size=00000022 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 000816fc records: 3, size/record: 2, table size: 6
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000400      10 (00000400)     __stack
+
+00008000     200 (00008000)     TTPLPFC_guiPowerStageStart
+00008001     200 (00008000)     TTPLPFC_guiPowerStageStop
+00008002     200 (00008000)     TTPLPFC_gi_Kp
+00008004     200 (00008000)     TTPLPFC_gi_Ki
+00008006     200 (00008000)     TTPLPFC_gi_Kp_Ref
+00008008     200 (00008000)     TTPLPFC_gi_Ki_Ref
+0000800a     200 (00008000)     TTPLPFC_updateCoefficientsCommand
+0000800c     200 (00008000)     TTPLPFC_iL1_sensed_pu
+0000800e     200 (00008000)     TTPLPFC_iL2_sensed_pu
+00008010     200 (00008000)     TTPLPFC_iL1_senseOffset_pu
+00008012     200 (00008000)     TTPLPFC_iL2_senseOffset_pu
+00008014     200 (00008000)     TTPLPFC_iL1_sensed_Amps
+00008016     200 (00008000)     TTPLPFC_iL2_sensed_Amps
+00008018     200 (00008000)     TTPLPFC_ac_cur_sensed_pu
+0000801a     200 (00008000)     TTPLPFC_ac_cur_sensed_Amps
+0000801c     200 (00008000)     TTPLPFC_thetaOffset_pu
+0000801e     200 (00008000)     TTPLPFC_ac_cur_ref_inst_pu
+00008020     200 (00008000)     TTPLPFC_ac_cur_ref_inst_prev_pu
+00008022     200 (00008000)     TTPLPFC_dbRED_SetValue_ticks
+00008024     200 (00008000)     TTPLPFC_dbRED_SetValue_Temp_ticks
+00008026     200 (00008000)     TTPLPFC_dbFED_SetValue_ticks
+00008028     200 (00008000)     TTPLPFC_dbRED_SetValue1_ticks
+0000802a     200 (00008000)     TTPLPFC_dbRED_SetValue_Temp1_ticks
+0000802c     200 (00008000)     TTPLPFC_dbRED_SetValue2_ticks
+0000802e     200 (00008000)     TTPLPFC_dbRED_SetValue_Temp2_ticks
+00008030     200 (00008000)     TTPLPFC_dbRED_SetValue3_ticks
+00008032     200 (00008000)     TTPLPFC_dbRED_SetValue_Temp3_ticks
+00008034     200 (00008000)     TTPLPFC_dbRED_Min_ticks
+00008036     200 (00008000)     TTPLPFC_dbRED_Max_ticks
+00008038     200 (00008000)     TTPLPFC_pwm_SwState
+0000803a     200 (00008000)     TTPLPFC_ISR1cap1Count
+0000803c     200 (00008000)     TTPLPFC_ISR1cap2Count
+0000803e     200 (00008000)     TTPLPFC_ISR1cap3Count
+
+00008040     201 (00008040)     TTPLPFC_ISR1cap4Count
+00008042     201 (00008040)     TTPLPFC_ISR1_capCountMax
+00008044     201 (00008040)     TTPLPFC_ISR1cap1CountAvg
+00008046     201 (00008040)     TTPLPFC_ISR2_LoadingAvg_accountingForNesting
+00008048     201 (00008040)     TTPLPFC_ISR1_Loading
+0000804a     201 (00008040)     TTPLPFC_ISR1_LoadingMax
+0000804c     201 (00008040)     TTPLPFC_ISR2cap1Count
+0000804e     201 (00008040)     TTPLPFC_ISR2cap2Count
+00008050     201 (00008040)     TTPLPFC_ISR2cap3Count
+00008052     201 (00008040)     TTPLPFC_ISR2cap4Count
+00008054     201 (00008040)     TTPLPFC_ISR2_Loading
+00008056     201 (00008040)     TTPLPFC_ISR2_LoadingAvg
+00008058     201 (00008040)     TTPLPFC_rgen
+0000805e     201 (00008040)     TTPLPFC_notch1
+
+00008080     202 (00008080)     TTPLPFC_notch2
+00008092     202 (00008080)     TTPLPFC_notch_50Hz
+000080a4     202 (00008080)     TTPLPFC_notch_60Hz
+
+000080c0     203 (000080c0)     TTPLPFC_spll_notch_50Hz
+000080d2     203 (000080c0)     TTPLPFC_spll_notch_60Hz
+000080e4     203 (000080c0)     TTPLPFC_gi1
+
+00008100     204 (00008100)     TTPLPFC_gi2
+00008116     204 (00008100)     TTPLPFC_gv
+
+00008140     205 (00008140)     TTPLPFC_spll2
+
+00008180     206 (00008180)     TTPLPFC_sine_mains
+
+000081c0     207 (000081c0)     TTPLPFC_spll1
+
+00008240     209 (00008240)     TTPLPFC_spll3
+
+0000828a     20a (00008280)     CLLLC_pwmPhaseShiftPrimLegs_HiResticks
+0000828b     20a (00008280)     CLLLC_modeChangeFlag
+0000828c     20a (00008280)     CLLLC_pwmISRTrig_ticks
+0000828d     20a (00008280)     CLLLC_pwmISRTrig_ticks_prev
+0000828e     20a (00008280)     CLLLC_enableLC
+00008290     20a (00008280)     CLLLC_closeGiLoop
+00008292     20a (00008280)     CLLLC_closeGvLoop
+00008294     20a (00008280)     CLLLC_clearTrip
+00008296     20a (00008280)     CLLLC_pwmFrequency_Hz
+00008298     20a (00008280)     CLLLC_pwmFrequencyPrev_Hz
+0000829a     20a (00008280)     CLLLC_pwmPeriodRef_pu
+0000829c     20a (00008280)     CLLLC_pwmPeriodSlewed_pu
+0000829e     20a (00008280)     CLLLC_iPrimSensed_pu
+000082a0     20a (00008280)     CLLLC_pwmDutyPrimRef_pu
+000082a2     20a (00008280)     CLLLC_pwmDeadBandREDPrimRef_ns
+000082a4     20a (00008280)     CLLLC_pwmDeadBandFEDPrimRef_ns
+000082a6     20a (00008280)     CLLLC_iSecSensed_pu
+000082a8     20a (00008280)     CLLLC_iSecRef_Amps
+000082aa     20a (00008280)     CLLLC_pwmDutySecRef_pu
+000082ac     20a (00008280)     CLLLC_pwmDutySecAdjust_pu
+000082ae     20a (00008280)     CLLLC_pwmPhaseShiftPrimSecRef_ns
+000082b0     20a (00008280)     CLLLC_pwmPhaseShiftPrimLegsRef_pu
+000082b2     20a (00008280)     CLLLC_pwmPhaseShiftPrimLegs_ns
+000082b4     20a (00008280)     TTPLPFC_vBusSensedBuffIndex
+000082b6     20a (00008280)     TTPLPFC_ac_vol_sensed_buff_index
+000082b8     20a (00008280)     TTPLPFC_phase1ScaleFactor
+000082ba     20a (00008280)     TTPLPFC_phase2ScaleFactor
+000082bc     20a (00008280)     TTPLPFC_phase3ScaleFactor
+000082be     20a (00008280)     CLLLC_startupDelay
+
+000082c0     20b (000082c0)     CLLLC_pwmDeadBandREDSec_ticks
+000082c1     20b (000082c0)     CLLLC_pwmDeadbandFEDSec_ticks
+000082c2     20b (000082c0)     CLLLC_pwmPhaseShiftPrimSec_countDirection
+000082c3     20b (000082c0)     CLLLC_pwmPhaseShiftPrimLegs_countDirection
+000082c4     20b (000082c0)     CLLLC_Lab
+000082c6     20b (000082c0)     CLLLC_tripFlag
+000082c8     20b (000082c0)     CLLLC_pwmSwStateActive
+000082ca     20b (000082c0)     CLLLC_pwmSwState
+000082cc     20b (000082c0)     CLLLC_powerFlowStateActive
+000082ce     20b (000082c0)     CLLLC_powerFlowState
+000082d0     20b (000082c0)     CLLLC_commandSentTo_AC_DC
+000082d2     20b (000082c0)     CLLLC_ModulationMode
+000082d4     20b (000082c0)     CLLLC_giOut
+000082d6     20b (000082c0)     CLLLC_giError
+000082d8     20b (000082c0)     CLLLC_giPartialComputedValue
+000082da     20b (000082c0)     CLLLC_gvOut
+000082dc     20b (000082c0)     CLLLC_gvError
+000082de     20b (000082c0)     CLLLC_gvPartialComputedValue
+000082e0     20b (000082c0)     CLLLC_pwmPeriod_pu
+000082e2     20b (000082c0)     CLLLC_pwmPeriodMin_pu
+000082e4     20b (000082c0)     CLLLC_pwmPeriodMax_pu
+000082e6     20b (000082c0)     CLLLC_pwmPeriodMax_ticks
+000082e8     20b (000082c0)     CLLLC_pwmPeriod_ticks
+000082ea     20b (000082c0)     CLLLC_iPrimSensed_Amps
+000082ec     20b (000082c0)     CLLLC_iPrimSensedOffset_pu
+000082ee     20b (000082c0)     CLLLC_iPrimSensedCalIntercept_pu
+000082f0     20b (000082c0)     CLLLC_iPrimSensedCalXvariable_pu
+000082f2     20b (000082c0)     CLLLC_iPrimTankSensed_Amps
+000082f4     20b (000082c0)     CLLLC_iPrimTankSensed_pu
+000082f6     20b (000082c0)     CLLLC_iPrimTankSensedOffset_pu
+000082f8     20b (000082c0)     CLLLC_iPrimTankSensedCalIntercept_pu
+000082fa     20b (000082c0)     CLLLC_iPrimTankSensedCalXvariable_pu
+000082fc     20b (000082c0)     CLLLC_vPrimSensed_Volts
+000082fe     20b (000082c0)     CLLLC_vPrimSensed_pu
+
+00008300     20c (00008300)     CLLLC_vPrimSensedOffset_pu
+00008302     20c (00008300)     CLLLC_vPrimRef_Volts
+00008304     20c (00008300)     CLLLC_vPrimRef_pu
+00008306     20c (00008300)     CLLLC_vPrimRefSlewed_pu
+00008308     20c (00008300)     CLLLC_pwmDutyPrim_pu
+0000830a     20c (00008300)     CLLLC_pwmDutyAPrim_ticks
+0000830c     20c (00008300)     CLLLC_pwmDutyBPrim_ticks
+0000830e     20c (00008300)     CLLLC_pwmDeadBandREDPrim_ticks
+00008310     20c (00008300)     CLLLC_pwmDeadBandFEDPrim_ticks
+00008312     20c (00008300)     CLLLC_iSecSenseDiag
+00008314     20c (00008300)     CLLLC_iSecSensed_Amps
+00008316     20c (00008300)     CLLLC_iSecSensedOffset_pu
+00008318     20c (00008300)     CLLLC_iSecSensedCalIntercept_pu
+0000831a     20c (00008300)     CLLLC_iSecSensedCalXvariable_pu
+0000831c     20c (00008300)     CLLLC_iSecRef_pu
+0000831e     20c (00008300)     CLLLC_iSecRefSlewed_pu
+00008320     20c (00008300)     CLLLC_vSecSensed_Volts
+00008322     20c (00008300)     CLLLC_vSecSensed_pu
+00008324     20c (00008300)     CLLLC_vSecSensedOffset_pu
+00008326     20c (00008300)     CLLLC_vSecRef_Volts
+00008328     20c (00008300)     CLLLC_vSecRef_pu
+0000832a     20c (00008300)     CLLLC_vSecRefSlewed_pu
+0000832c     20c (00008300)     CLLLC_pwmDutySec_pu
+0000832e     20c (00008300)     CLLLC_pwmDutyASec_ticks
+00008330     20c (00008300)     CLLLC_pwmDutyBSec_ticks
+00008332     20c (00008300)     CLLLC_pwmDeadBandREDSec_ns
+00008334     20c (00008300)     CLLLC_pwmDeadBandFEDSec_ns
+00008336     20c (00008300)     CLLLC_pwmPhaseShiftPrimSec_ns
+00008338     20c (00008300)     CLLLC_pwmPhaseShiftPrimSec_ticks
+0000833a     20c (00008300)     CLLLC_pwmPhaseShiftPrimLegs_pu
+0000833c     20c (00008300)     CLLLC_pwmPhaseShiftPrimLegs_ticks
+
+00008340     20d (00008340)     CLLLC_iPrimSensedAvg_pu
+00008344     20d (00008340)     CLLLC_iPrimTankSensedAvg_pu
+00008348     20d (00008340)     CLLLC_vPrimSensedAvg_pu
+0000834c     20d (00008340)     CLLLC_iSecSensedAvg_pu
+00008350     20d (00008340)     CLLLC_vSecSensedAvg_pu
+00008354     20d (00008340)     CLLLC_gi
+
+00008380     20e (00008380)     CLLLC_gv
+
+000083c0     20f (000083c0)     TTPLPFC_gi1_out_ff_scale
+000083c2     20f (000083c0)     TTPLPFC_lab
+000083c4     20f (000083c0)     TTPLPFC_board_State
+000083c6     20f (000083c0)     TTPLPFC_board_Status
+000083c8     20f (000083c0)     TTPLPFC_vBus_sensed_pu
+000083ca     20f (000083c0)     TTPLPFC_vBus_sensedOffset_pu
+000083cc     20f (000083c0)     TTPLPFC_vBus_sensed_Volts
+000083ce     20f (000083c0)     TTPLPFC_ac_L_sensed_pu
+000083d0     20f (000083c0)     TTPLPFC_ac_N_sensed_pu
+000083d2     20f (000083c0)     TTPLPFC_ac_vol_sensed_pu
+000083d4     20f (000083c0)     TTPLPFC_ac_vol_sensed_Volts
+000083d6     20f (000083c0)     TTPLPFC_ac_L_senseOffset_pu
+000083d8     20f (000083c0)     TTPLPFC_ac_N_senseOffset_pu
+000083da     20f (000083c0)     TTPLPFC_ac_vol_senseOffset_pu
+000083dc     20f (000083c0)     TTPLPFC_system_temp_pu
+000083de     20f (000083c0)     TTPLPFC_system_vref_165_pu
+000083e0     20f (000083c0)     TTPLPFC_vbus2_pu
+000083e2     20f (000083c0)     TTPLPFC_vol2_pu
+000083e4     20f (000083c0)     TTPLPFC_vBusAvg_pu
+000083e6     20f (000083c0)     TTPLPFC_vRmsAvg_pu
+000083e8     20f (000083c0)     TTPLPFC_threshold_PZC1
+000083ea     20f (000083c0)     TTPLPFC_threshold_PZC2
+000083ec     20f (000083c0)     TTPLPFC_threshold_NZC1
+000083ee     20f (000083c0)     TTPLPFC_threshold_NZC2
+000083f0     20f (000083c0)     TTPLPFC_ac_cur_ref_pu
+000083f2     20f (000083c0)     TTPLPFC_inductor_voltage_drop_feedforward
+000083f4     20f (000083c0)     TTPLPFC_vBusRef_pu
+000083f6     20f (000083c0)     TTPLPFC_vBusRefSlewed_pu
+000083f8     20f (000083c0)     TTPLPFC_softstart_duty
+000083fa     20f (000083c0)     TTPLPFC_softStartDeadbandScalingFactor
+000083fc     20f (000083c0)     TTPLPFC_vBus_overVoltage_Volts
+000083fe     20f (000083c0)     TTPLPFC_vBus_underVoltage_Volts
+
+00008400     210 (00008400)     TTPLPFC_duty1_pu
+00008402     210 (00008400)     TTPLPFC_duty2_pu
+00008404     210 (00008400)     TTPLPFC_duty_clamp_high_pu
+00008406     210 (00008400)     TTPLPFC_duty_clamp_low_pu
+00008408     210 (00008400)     TTPLPFC_duty_DC_ref_pu
+0000840a     210 (00008400)     TTPLPFC_duty_DC_ref_final_pu
+0000840c     210 (00008400)     TTPLPFC_duty_ref_pu
+0000840e     210 (00008400)     TTPLPFC_powerRms_Watts
+00008410     210 (00008400)     TTPLPFC_ac_curRms_sensed_Amps
+00008412     210 (00008400)     TTPLPFC_ac_volRms_sensed_Volts
+00008414     210 (00008400)     TTPLPFC_ac_volRms_overVoltage_Volts
+00008416     210 (00008400)     TTPLPFC_ac_volRms_underVoltage_Volts
+00008418     210 (00008400)     TTPLPFC_powerFactor
+0000841a     210 (00008400)     TTPLPFC_apparentPower_VA
+0000841c     210 (00008400)     TTPLPFC_acFreqAvg_Hz
+0000841e     210 (00008400)     TTPLPFC_ac_volEma_sensed_Volts
+00008420     210 (00008400)     TTPLPFC_ac_volRmsEma_sensed_Volts
+00008422     210 (00008400)     TTPLPFC_autoStartSlew
+00008424     210 (00008400)     TTPLPFC_iref1_pu
+00008426     210 (00008400)     TTPLPFC_iref2_pu
+00008428     210 (00008400)     TTPLPFC_deltaIref_pu
+0000842a     210 (00008400)     TTPLPFC_closeGiLoop
+0000842c     210 (00008400)     TTPLPFC_closeGvLoop
+0000842e     210 (00008400)     TTPLPFC_clearTrip
+00008430     210 (00008400)     TTPLPFC_rlyConnect
+00008432     210 (00008400)     TTPLPFC_firstTimeGvLoop
+00008434     210 (00008400)     TTPLPFC_acSine
+00008436     210 (00008400)     TTPLPFC_acSinePrev
+00008438     210 (00008400)     TTPLPFC_acCosine
+0000843a     210 (00008400)     TTPLPFC_acCosinePrev
+0000843c     210 (00008400)     TTPLPFC_zeroCrossDetectFlag
+0000843e     210 (00008400)     TTPLPFC_interleaving_State
+
+00008440     211 (00008440)     TTPLPFC_state_slew
+00008442     211 (00008440)     TTPLPFC_state_slew_max
+00008444     211 (00008440)     TTPLPFC_gi1_out
+00008446     211 (00008440)     TTPLPFC_gi2_out
+00008448     211 (00008440)     TTPLPFC_gv_out
+0000844a     211 (00008440)     TTPLPFC_vBus_sensedFiltered
+0000844c     211 (00008440)     TTPLPFC_vBus_sensedFiltered_notch1
+0000844e     211 (00008440)     TTPLPFC_vBus_sensedFiltered_notch2
+00008450     211 (00008440)     TTPLPFC_ac_sign_filtered
+00008452     211 (00008440)     TTPLPFC_spll_sine
+00008454     211 (00008440)     TTPLPFC_spll_cosine
+00008456     211 (00008440)     TTPLPFC_voltage_error
+00008458     211 (00008440)     TTPLPFC_nonLinearVoltageLoopFlag
+0000845a     211 (00008440)     TTPLPFC_nonLinearVoltageLoopFlagDelay
+0000845c     211 (00008440)     TTPLPFC_softStartDeadBandFED
+0000845e     211 (00008440)     TTPLPFC_manualStop
+00008460     211 (00008440)     TTPLPFC_timedRun_flag
+00008462     211 (00008440)     TTPLPFC_timedRun_ms
+00008464     211 (00008440)     TTPLPFC_timedRunCounter_ms
+00008466     211 (00008440)     TTPLPFC_dutySlew_pu
+00008468     211 (00008440)     TTPLPFC_ISR1_nestingCounter
+0000846a     211 (00008440)     TTPLPFC_ISR1_nests
+0000846c     211 (00008440)     TTPLPFC_ISR1_nestsMax
+0000846e     211 (00008440)     TTPLPFC_ISR1_nestsAvg
+00008470     211 (00008440)     TTPLPFC_ac_vol_sensed_buff
+0000847a     211 (00008440)     TTPLPFC_vBusSensedBuff
+
+0000e000     380 (0000e000)     CLLLC_dBuff1
+
+0000e0c8     383 (0000e0c0)     CLLLC_dBuff2
+
+0000e190     386 (0000e180)     CLLLC_dBuff3
+
+0000e258     389 (0000e240)     CLLLC_dBuff4
+
+0000e320     38c (0000e300)     TTPLPFC_dBuff1
+
+0000e3e8     38f (0000e3c0)     TTPLPFC_dBuff2
+
+0000e4b0     392 (0000e480)     TTPLPFC_dBuff3
+
+0000e578     395 (0000e540)     TTPLPFC_dBuff4
+
+0000e640     399 (0000e640)     CLLLC_slewSCIcommand
+0000e642     399 (0000e640)     CLLLC_dVal1
+0000e644     399 (0000e640)     CLLLC_dVal2
+0000e646     399 (0000e640)     CLLLC_dVal3
+0000e648     399 (0000e640)     CLLLC_dVal4
+0000e64e     399 (0000e640)     CLLLC_dLog1
+
+0000e680     39a (0000e680)     CLLLC_sfra1
+0000e6a0     39a (0000e680)     SFRA_GUI_arrayGetList
+
+0000e6c0     39b (0000e6c0)     TTPLPFC_dVal1
+0000e6c2     39b (0000e6c0)     TTPLPFC_dVal2
+0000e6c4     39b (0000e6c0)     TTPLPFC_dVal3
+0000e6c6     39b (0000e6c0)     TTPLPFC_dVal4
+0000e6c8     39b (0000e6c0)     TTPLPFC_dLog1
+
+0000e700     39c (0000e700)     TTPLPFC_sfra1
+0000e720     39c (0000e700)     TTPLPFC_freqVect
+
+0000e75c     39d (0000e740)     TTPLPFC_olMagVect
+
+0000e798     39e (0000e780)     TTPLPFC_olPhaseVect
+
+0000e7d4     39f (0000e7c0)     TTPLPFC_plantMagVect
+
+0000e810     3a0 (0000e800)     TTPLPFC_plantPhaseVect
+
+0000e84c     3a1 (0000e840)     Alpha_State_Ptr
+0000e84e     3a1 (0000e840)     A_Task_Ptr
+0000e850     3a1 (0000e840)     B_Task_Ptr
+0000e852     3a1 (0000e840)     C_Task_Ptr
+0000e854     3a1 (0000e840)     CLLLC_ISR2cap1Count
+0000e856     3a1 (0000e840)     CLLLC_ISR2cap2Count
+0000e858     3a1 (0000e840)     CLLLC_ISR2cap3Count
+0000e85a     3a1 (0000e840)     CLLLC_ISR2cap4Count
+0000e85c     3a1 (0000e840)     CLLLC_ISR3cap1Count
+0000e85e     3a1 (0000e840)     CLLLC_ISR3cap2Count
+0000e860     3a1 (0000e840)     CLLLC_ISR3cap3Count
+0000e862     3a1 (0000e840)     CLLLC_ISR3cap4Count
+0000e864     3a1 (0000e840)     CLLLC_ISR2_Loading
+0000e866     3a1 (0000e840)     CLLLC_ISR2_LoadingMax
+0000e868     3a1 (0000e840)     CLLLC_ISR3_Loading
+0000e86a     3a1 (0000e840)     CLLLC_ISR3_LoadingAvg
+0000e86c     3a1 (0000e840)     OBC_7_4KW_ISR2_nestingCounter
+0000e86e     3a1 (0000e840)     OBC_7_4KW_ISR2_nests
+0000e870     3a1 (0000e840)     OBC_7_4KW_ISR2_nestsMax
+0000e872     3a1 (0000e840)     OBC_7_4KW_ISR2_nestsAvg
+0000e874     3a1 (0000e840)     OBC_7_4KW_ISR3_LoadingAvg_accountingForNesting
+0000e876     3a1 (0000e840)     OBC_7_4KW_ISR3_LoadingAvgMax_accountingForNesting
+0000e87c     3a1 (0000e840)     vTimer0
+
+0000e880     3a2 (0000e880)     SFRA_GUI_commsOKflg
+0000e881     3a2 (0000e880)     SFRA_GUI_serialCommsTimer
+0000e882     3a2 (0000e880)     SFRA_GUI_lowByteFlag
+0000e883     3a2 (0000e880)     SFRA_GUI_sendTaskPtr
+0000e884     3a2 (0000e880)     SFRA_GUI_rxChar
+0000e885     3a2 (0000e880)     SFRA_GUI_rxWord
+0000e886     3a2 (0000e880)     SFRA_GUI_taskDoneFlag
+0000e887     3a2 (0000e880)     SFRA_GUI_numWords
+0000e888     3a2 (0000e880)     SFRA_GUI_wordsLeftToGet
+0000e889     3a2 (0000e880)     SFRA_GUI_dataOut16
+0000e88a     3a2 (0000e880)     SFRA_GUI_rcvTskPtrShdw
+0000e88b     3a2 (0000e880)     SFRA_GUI_delayer
+0000e88c     3a2 (0000e880)     SFRA_GUI_memGetPtr
+0000e88d     3a2 (0000e880)     SFRA_GUI_memGetAmount
+0000e88e     3a2 (0000e880)     SFRA_GUI_memSetPtr
+0000e88f     3a2 (0000e880)     SFRA_GUI_led_flag
+0000e890     3a2 (0000e880)     SFRA_GUI_led_gpio
+0000e891     3a2 (0000e880)     SFRA_GUI_sweep_start
+0000e892     3a2 (0000e880)     SFRA_GUI_rcvTaskPointer
+0000e894     3a2 (0000e880)     SFRA_GUI_sci_base_addr
+0000e896     3a2 (0000e880)     SFRA_GUI_dataOut32
+0000e898     3a2 (0000e880)     SFRA_GUI_memDataPtr16
+0000e89a     3a2 (0000e880)     SFRA_GUI_memDataPtr32
+0000e89c     3a2 (0000e880)     SFRA_GUI_memGetAddress
+0000e89e     3a2 (0000e880)     SFRA_GUI_memSetValue
+0000e8a0     3a2 (0000e880)     SFRA_GUI_temp
+0000e8a2     3a2 (0000e880)     SFRA_GUI_cmdDispatcher
+
+0000e8c2     3a3 (0000e8c0)     SFRA_GUI_dataSetList
+0000e8e2     3a3 (0000e8c0)     SFRA_GUI_varGetList
+
+0000e902     3a4 (0000e900)     SFRA_GUI_varSetBtnList
+0000e922     3a4 (0000e900)     SFRA_GUI_varSetSldrList
+
+0000e942     3a5 (0000e940)     SFRA_GUI_varSetTxtList
+0000e962     3a5 (0000e940)     MEP_ScaleFactor
+0000e964     3a5 (0000e940)     CLLLC_HAL_GaNTemp_C
+0000e97c     3a5 (0000e940)     vTimer1
+
+0000e980     3a6 (0000e980)     TTPLPFC_HAL_GaNTemp_C
+0000e998     3a6 (0000e980)     MEP_SF
+0000e9a1     3a6 (0000e980)     SFRA_GUI_cmdPacket
+0000e9a7     3a6 (0000e980)     SFO_CAL
+0000e9ac     3a6 (0000e980)     CLLLC_dlogTrigger
+0000e9ae     3a6 (0000e980)     ePWM
+
+0000e9c0     3a7 (0000e9c0)     index
+0000e9da     3a7 (0000e9c0)     __TI_enable_exit_profile_output
+0000e9dc     3a7 (0000e9c0)     __TI_cleanup_ptr
+0000e9de     3a7 (0000e9c0)     __TI_dtors_ptr
+0000e9e0     3a7 (0000e9c0)     _lock
+0000e9e2     3a7 (0000e9c0)     _unlock
+
+0000ea00     3a8 (0000ea00)     _SFRA_F32_state
+0000ea01     3a8 (0000ea00)     _SFRA_F32_stateSlew
+0000ea02     3a8 (0000ea00)     _SFRA_F32_rSinSum
+0000ea04     3a8 (0000ea00)     _SFRA_F32_rCosSum
+0000ea06     3a8 (0000ea00)     _SFRA_F32_uSinSum
+0000ea08     3a8 (0000ea00)     _SFRA_F32_uCosSum
+0000ea0a     3a8 (0000ea00)     _SFRA_F32_ySinSum
+0000ea0c     3a8 (0000ea00)     _SFRA_F32_yCosSum
+0000ea0e     3a8 (0000ea00)     _SFRA_F32_pointerStart
+0000ea10     3a8 (0000ea00)     _SFRA_F32_reference
+0000ea12     3a8 (0000ea00)     _SFRA_F32_amplitude
+0000ea14     3a8 (0000ea00)     _SFRA_F32_scalar
+0000ea16     3a8 (0000ea00)     _SFRA_F32_step
+0000ea18     3a8 (0000ea00)     _SFRA_F32_pointer
+0000ea1a     3a8 (0000ea00)     _SFRA_F32_preCount
+0000ea1c     3a8 (0000ea00)     _SFRA_F32_count
+0000ea1e     3a8 (0000ea00)     _SFRA_F32_windowSamples
+0000ea20     3a8 (0000ea00)     _SFRA_F32_angle
+
+0000f000     3c0 (0000f000)     FPU32LOG2
+0000f002     3c0 (0000f000)     FPU32INVLOG10
+0000f004     3c0 (0000f000)     FPU32EXPBIAS
+0000f006     3c0 (0000f000)     FPU32LOG_TABLE_MASK1
+0000f008     3c0 (0000f000)     FPU32LOG_TABLE_MASK2
+0000f00a     3c0 (0000f000)     FPU32logTable
+
+0000f0d0     3c3 (0000f0c0)     FPU32logTableEnd
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                                              
+----  -------   ----                                              
+0     00084f03  A0                                                
+0     00084ff0  A1                                                
+0     00084e52  ADC_setOffsetTrimAll                              
+0     00084e86  ADC_setVREF                                       
+0     0000e84e  A_Task_Ptr                                        
+0     0000e84c  Alpha_State_Ptr                                   
+0     00084f1b  B0                                                
+0     0008501c  B1                                                
+0     0008506a  B2                                                
+0     00085026  B3                                                
+0     0000e850  B_Task_Ptr                                        
+0     00084b17  C$$EXIT                                           
+0     00084de2  CLA_setTriggerSource                              
+0     0000e964  CLLLC_HAL_GaNTemp_C                               
+0     00085030  CLLLC_HAL_disablePWMClkCounting                   
+0     0008504b  CLLLC_HAL_enablePWMClkCounting                    
+0     00084165  CLLLC_HAL_setupADC                                
+0     00083da0  CLLLC_HAL_setupBoardProtection                    
+0     00084042  CLLLC_HAL_setupCLA                                
+0     00084359  CLLLC_HAL_setupDevice                             
+0     0008495b  CLLLC_HAL_setupECAPforDutyCapture                 
+0     00084d2e  CLLLC_HAL_setupECAPforGaNTemp                     
+0     00084ac4  CLLLC_HAL_setupECAPinPWMMode                      
+0     00083fa4  CLLLC_HAL_setupGPIOs                              
+0     000841f3  CLLLC_HAL_setupHRPWMinUpDownCount2ChAsymmetricMode
+0     00083b56  CLLLC_HAL_setupHRPWMinUpDownCountModeWithDeadBand 
+0     00083312  CLLLC_HAL_setupPWM                                
+0     000848f7  CLLLC_HAL_setupPWMinUpDownCountMode               
+0     00083c1d  CLLLC_HAL_setupPWMpins                            
+0     00082570  CLLLC_HAL_setupSynchronousRectificationAction     
+0     00084819  CLLLC_HAL_setupSynchronousRectificationActionDebug
+0     000839a5  CLLLC_HAL_setupTrigForADC                         
+0     00084fcc  CLLLC_HAL_toggleLED1                              
+0     0000e864  CLLLC_ISR2_Loading                                
+0     0000e866  CLLLC_ISR2_LoadingMax                             
+0     0000e854  CLLLC_ISR2cap1Count                               
+0     0000e856  CLLLC_ISR2cap2Count                               
+0     0000e858  CLLLC_ISR2cap3Count                               
+0     0000e85a  CLLLC_ISR2cap4Count                               
+0     0000e868  CLLLC_ISR3_Loading                                
+0     0000e86a  CLLLC_ISR3_LoadingAvg                             
+0     0000e85c  CLLLC_ISR3cap1Count                               
+0     0000e85e  CLLLC_ISR3cap2Count                               
+0     0000e860  CLLLC_ISR3cap3Count                               
+0     0000e862  CLLLC_ISR3cap4Count                               
+0     000082c4  CLLLC_Lab                                         
+0     000082d2  CLLLC_ModulationMode                              
+0     00083ce4  CLLLC_changeSynchronousRectifierPwmBehavior       
+0     00008294  CLLLC_clearTrip                                   
+0     00008290  CLLLC_closeGiLoop                                 
+0     00008292  CLLLC_closeGvLoop                                 
+0     000082d0  CLLLC_commandSentTo_AC_DC                         
+0     0000e000  CLLLC_dBuff1                                      
+0     0000e0c8  CLLLC_dBuff2                                      
+0     0000e190  CLLLC_dBuff3                                      
+0     0000e258  CLLLC_dBuff4                                      
+0     0000e64e  CLLLC_dLog1                                       
+0     0000e642  CLLLC_dVal1                                       
+0     0000e644  CLLLC_dVal2                                       
+0     0000e646  CLLLC_dVal3                                       
+0     0000e648  CLLLC_dVal4                                       
+0     0000e9ac  CLLLC_dlogTrigger                                 
+0     0000828e  CLLLC_enableLC                                    
+0     00008354  CLLLC_gi                                          
+0     000082d6  CLLLC_giError                                     
+0     000082d4  CLLLC_giOut                                       
+0     000082d8  CLLLC_giPartialComputedValue                      
+0     00008380  CLLLC_gv                                          
+0     000082dc  CLLLC_gvError                                     
+0     000082da  CLLLC_gvOut                                       
+0     000082de  CLLLC_gvPartialComputedValue                      
+0     00008340  CLLLC_iPrimSensedAvg_pu                           
+0     000082ee  CLLLC_iPrimSensedCalIntercept_pu                  
+0     000082f0  CLLLC_iPrimSensedCalXvariable_pu                  
+0     000082ec  CLLLC_iPrimSensedOffset_pu                        
+0     000082ea  CLLLC_iPrimSensed_Amps                            
+0     0000829e  CLLLC_iPrimSensed_pu                              
+0     00008344  CLLLC_iPrimTankSensedAvg_pu                       
+0     000082f8  CLLLC_iPrimTankSensedCalIntercept_pu              
+0     000082fa  CLLLC_iPrimTankSensedCalXvariable_pu              
+0     000082f6  CLLLC_iPrimTankSensedOffset_pu                    
+0     000082f2  CLLLC_iPrimTankSensed_Amps                        
+0     000082f4  CLLLC_iPrimTankSensed_pu                          
+0     0000831e  CLLLC_iSecRefSlewed_pu                            
+0     000082a8  CLLLC_iSecRef_Amps                                
+0     0000831c  CLLLC_iSecRef_pu                                  
+0     00008312  CLLLC_iSecSenseDiag                               
+0     0000834c  CLLLC_iSecSensedAvg_pu                            
+0     00008318  CLLLC_iSecSensedCalIntercept_pu                   
+0     0000831a  CLLLC_iSecSensedCalXvariable_pu                   
+0     00008316  CLLLC_iSecSensedOffset_pu                         
+0     00008314  CLLLC_iSecSensed_Amps                             
+0     000082a6  CLLLC_iSecSensed_pu                               
+0     000828ed  CLLLC_initGlobalVariables                         
+0     0000828b  CLLLC_modeChangeFlag                              
+0     000082ce  CLLLC_powerFlowState                              
+0     000082cc  CLLLC_powerFlowStateActive                        
+0     000082a4  CLLLC_pwmDeadBandFEDPrimRef_ns                    
+0     00008310  CLLLC_pwmDeadBandFEDPrim_ticks                    
+0     00008334  CLLLC_pwmDeadBandFEDSec_ns                        
+0     000082a2  CLLLC_pwmDeadBandREDPrimRef_ns                    
+0     0000830e  CLLLC_pwmDeadBandREDPrim_ticks                    
+0     00008332  CLLLC_pwmDeadBandREDSec_ns                        
+0     000082c0  CLLLC_pwmDeadBandREDSec_ticks                     
+0     000082c1  CLLLC_pwmDeadbandFEDSec_ticks                     
+0     0000830a  CLLLC_pwmDutyAPrim_ticks                          
+0     0000832e  CLLLC_pwmDutyASec_ticks                           
+0     0000830c  CLLLC_pwmDutyBPrim_ticks                          
+0     00008330  CLLLC_pwmDutyBSec_ticks                           
+0     000082a0  CLLLC_pwmDutyPrimRef_pu                           
+0     00008308  CLLLC_pwmDutyPrim_pu                              
+0     000082ac  CLLLC_pwmDutySecAdjust_pu                         
+0     000082aa  CLLLC_pwmDutySecRef_pu                            
+0     0000832c  CLLLC_pwmDutySec_pu                               
+0     00008298  CLLLC_pwmFrequencyPrev_Hz                         
+0     00008296  CLLLC_pwmFrequency_Hz                             
+0     0000828c  CLLLC_pwmISRTrig_ticks                            
+0     0000828d  CLLLC_pwmISRTrig_ticks_prev                       
+0     000082e4  CLLLC_pwmPeriodMax_pu                             
+0     000082e6  CLLLC_pwmPeriodMax_ticks                          
+0     000082e2  CLLLC_pwmPeriodMin_pu                             
+0     0000829a  CLLLC_pwmPeriodRef_pu                             
+0     0000829c  CLLLC_pwmPeriodSlewed_pu                          
+0     000082e0  CLLLC_pwmPeriod_pu                                
+0     000082e8  CLLLC_pwmPeriod_ticks                             
+0     000082b0  CLLLC_pwmPhaseShiftPrimLegsRef_pu                 
+0     0000828a  CLLLC_pwmPhaseShiftPrimLegs_HiResticks            
+0     000082c3  CLLLC_pwmPhaseShiftPrimLegs_countDirection        
+0     000082b2  CLLLC_pwmPhaseShiftPrimLegs_ns                    
+0     0000833a  CLLLC_pwmPhaseShiftPrimLegs_pu                    
+0     0000833c  CLLLC_pwmPhaseShiftPrimLegs_ticks                 
+0     000082ae  CLLLC_pwmPhaseShiftPrimSecRef_ns                  
+0     000082c2  CLLLC_pwmPhaseShiftPrimSec_countDirection         
+0     00008336  CLLLC_pwmPhaseShiftPrimSec_ns                     
+0     00008338  CLLLC_pwmPhaseShiftPrimSec_ticks                  
+0     000082ca  CLLLC_pwmSwState                                  
+0     000082c8  CLLLC_pwmSwStateActive                            
+0     0008312d  CLLLC_runISR3                                     
+0     0008507c  CLLLC_setBuildLevelIndicatorVariable              
+0     0000e680  CLLLC_sfra1                                       
+0     0000e640  CLLLC_slewSCIcommand                              
+0     000082be  CLLLC_startupDelay                                
+0     000082c6  CLLLC_tripFlag                                    
+0     00084687  CLLLC_updateBoardStatus                           
+0     00008306  CLLLC_vPrimRefSlewed_pu                           
+0     00008302  CLLLC_vPrimRef_Volts                              
+0     00008304  CLLLC_vPrimRef_pu                                 
+0     00008348  CLLLC_vPrimSensedAvg_pu                           
+0     00008300  CLLLC_vPrimSensedOffset_pu                        
+0     000082fc  CLLLC_vPrimSensed_Volts                           
+0     000082fe  CLLLC_vPrimSensed_pu                              
+0     0000832a  CLLLC_vSecRefSlewed_pu                            
+0     00008326  CLLLC_vSecRef_Volts                               
+0     00008328  CLLLC_vSecRef_pu                                  
+0     00008350  CLLLC_vSecSensedAvg_pu                            
+0     00008324  CLLLC_vSecSensedOffset_pu                         
+0     00008320  CLLLC_vSecSensed_Volts                            
+0     00008322  CLLLC_vSecSensed_pu                               
+0     00084e9f  CMPSS_configFilterHigh                            
+0     00084eb8  CMPSS_configFilterLow                             
+0     00084f33  CMPSS_configLatchOnPWMSYNC                        
+0     00085070  CPUTimer_setEmulationMode                         
+0     0000e852  C_Task_Ptr                                        
+0     00009000  Cla1BackgroundTask                                
+abs   00000000  Cla1ConstLoadSize                                 
+0     00008000  Cla1ConstLoadStart                                
+0     00008000  Cla1ConstRunStart                                 
+abs   000006ea  Cla1ProgLoadSize                                  
+0     00086000  Cla1ProgLoadStart                                 
+0     00009000  Cla1ProgRunStart                                  
+0     000095a4  Cla1Task1                                         
+0     0000967e  Cla1Task2                                         
+0     00009690  Cla1Task3                                         
+0     000096a2  Cla1Task4                                         
+0     000096b4  Cla1Task5                                         
+0     000096c6  Cla1Task6                                         
+0     000096d8  Cla1Task7                                         
+0     00081678  DCL_runDF22_C1                                    
+0     00081640  DCL_runPI_C1                                      
+0     000816a8  DCL_runPI_C4                                      
+0     00083a83  Device_enableAllPeripherals                       
+0     000846d3  Device_init                                       
+0     00084f90  Device_initGPIO                                   
+0     0000f004  FPU32EXPBIAS                                      
+0     0000f002  FPU32INVLOG10                                     
+0     0000f000  FPU32LOG2                                         
+0     0000f006  FPU32LOG_TABLE_MASK1                              
+0     0000f008  FPU32LOG_TABLE_MASK2                              
+0     0000f00a  FPU32logTable                                     
+0     0000f0d0  FPU32logTableEnd                                  
+0     0000c000  Flash_initModule                                  
+0     00084718  GPIO_setAnalogMode                                
+0     00084cce  GPIO_setDirectionMode                             
+0     00084c48  GPIO_setMasterCore                                
+0     0008479e  GPIO_setPadConfig                                 
+0     0008492b  GPIO_setPinConfig                                 
+0     00084c6a  GPIO_setQualificationMode                         
+0     0000c640  ISR2_primToSecPowerFlow                           
+0     0000cbe3  ISR2_secToPrimPowerFlow                           
+0     0000c04f  ISR3                                              
+0     000848c1  Interrupt_enable                                  
+0     0008475d  Interrupt_initModule                              
+0     00084f48  Interrupt_initVectorTable                         
+0     0000e998  MEP_SF                                            
+0     0000e962  MEP_ScaleFactor                                   
+0     00084c8c  MemCfg_setLSRAMMasterSel                          
+0     0000e86c  OBC_7_4KW_ISR2_nestingCounter                     
+0     0000e86e  OBC_7_4KW_ISR2_nests                              
+0     0000e872  OBC_7_4KW_ISR2_nestsAvg                           
+0     0000e870  OBC_7_4KW_ISR2_nestsMax                           
+0     0000e876  OBC_7_4KW_ISR3_LoadingAvgMax_accountingForNesting 
+0     0000e874  OBC_7_4KW_ISR3_LoadingAvg_accountingForNesting    
+0     00085030  OBC_7_4KW_disablePWMClkCounting                   
+0     0008504b  OBC_7_4KW_enablePWMClkCounting                    
+0     00084cad  OBC_7_4KW_initGlobalVariables                     
+0     00085039  OBC_7_4KW_setupADC                                
+0     00084ffb  OBC_7_4KW_setupActiveSyncRectCLLLC                
+0     00085006  OBC_7_4KW_setupBoardProtection                    
+0     00084359  OBC_7_4KW_setupDevice                             
+0     00085081  OBC_7_4KW_setupGPIO                               
+0     00084d2e  OBC_7_4KW_setupGaNTempReading                     
+0     00083f01  OBC_7_4KW_setupInterrupt                          
+0     00084d4d  OBC_7_4KW_setupPWM                                
+0     00083480  OBC_7_4KW_setupSFRA                               
+abs   0008163d  RamfuncsLoadEnd                                   
+abs   0000063d  RamfuncsLoadSize                                  
+abs   00081000  RamfuncsLoadStart                                 
+abs   0000c63d  RamfuncsRunEnd                                    
+abs   0000063d  RamfuncsRunSize                                   
+abs   0000c000  RamfuncsRunStart                                  
+0     00084dfe  SCI_clearInterruptStatus                          
+0     00084e6c  SCI_enableInterrupt                               
+0     00084c25  SCI_setConfig                                     
+0     00082d53  SFO                                               
+0     0000e9a7  SFO_CAL                                           
+0     000830cb  SFRA_F32_config                                   
+0     000830a1  SFRA_F32_initFreqArrayWithLogSteps                
+0     0008306d  SFRA_F32_reset                                    
+0     00082f4c  SFRA_F32_resetFreqRespArray                       
+0     00082b53  SFRA_F32_runBackgroundTask                        
+0     00082f44  SFRA_F32_updateInjectionAmplitude                 
+0     0000e6a0  SFRA_GUI_arrayGetList                             
+0     0000e8a2  SFRA_GUI_cmdDispatcher                            
+0     00084cee  SFRA_GUI_cmdInterpreter                           
+0     0000e9a1  SFRA_GUI_cmdPacket                                
+0     0000e880  SFRA_GUI_commsOKflg                               
+0     000838ac  SFRA_GUI_config                                   
+0     0000e889  SFRA_GUI_dataOut16                                
+0     0000e896  SFRA_GUI_dataOut32                                
+0     0000e8c2  SFRA_GUI_dataSetList                              
+0     0000e88b  SFRA_GUI_delayer                                  
+0     00084bb6  SFRA_GUI_echoCmdByte                              
+0     00084d0e  SFRA_GUI_echoDataByte                             
+0     00084bdb  SFRA_GUI_echoSizeByte                             
+0     0008359d  SFRA_GUI_getArray                                 
+0     0008488a  SFRA_GUI_getCmdByte                               
+0     00084a43  SFRA_GUI_getData                                  
+0     00084d8b  SFRA_GUI_getDataByte                              
+0     00084da8  SFRA_GUI_getSizeByte                              
+0     0008359d  SFRA_GUI_getVariable                              
+0     0000e88f  SFRA_GUI_led_flag                                 
+0     0000e890  SFRA_GUI_led_gpio                                 
+0     00084638  SFRA_GUI_lifePulseTsk                             
+0     0000e882  SFRA_GUI_lowByteFlag                              
+0     0000e898  SFRA_GUI_memDataPtr16                             
+0     0000e89a  SFRA_GUI_memDataPtr32                             
+0     0000e89c  SFRA_GUI_memGetAddress                            
+0     0000e88d  SFRA_GUI_memGetAmount                             
+0     0000e88c  SFRA_GUI_memGetPtr                                
+0     0000e88e  SFRA_GUI_memSetPtr                                
+0     0000e89e  SFRA_GUI_memSetValue                              
+0     0000e887  SFRA_GUI_numWords                                 
+0     00084e1a  SFRA_GUI_packWord                                 
+0     0000e892  SFRA_GUI_rcvTaskPointer                           
+0     0000e88a  SFRA_GUI_rcvTskPtrShdw                            
+0     00084fa0  SFRA_GUI_runSerialHostComms                       
+0     0000e884  SFRA_GUI_rxChar                                   
+0     0000e885  SFRA_GUI_rxWord                                   
+0     0000e894  SFRA_GUI_sci_base_addr                            
+0     0008359d  SFRA_GUI_sendData                                 
+0     0000e883  SFRA_GUI_sendTaskPtr                              
+0     0000e881  SFRA_GUI_serialCommsTimer                         
+0     00084f5d  SFRA_GUI_setButton                                
+0     00084aee  SFRA_GUI_setData32                                
+0     00084f6e  SFRA_GUI_setSlider                                
+0     00084f7f  SFRA_GUI_setText                                  
+0     00085086  SFRA_GUI_spareTsk08                               
+0     0000e891  SFRA_GUI_sweep_start                              
+0     0000e886  SFRA_GUI_taskDoneFlag                             
+0     0000e8a0  SFRA_GUI_temp                                     
+0     0000e8e2  SFRA_GUI_varGetList                               
+0     0000e902  SFRA_GUI_varSetBtnList                            
+0     0000e922  SFRA_GUI_varSetSldrList                           
+0     0000e942  SFRA_GUI_varSetTxtList                            
+0     0000e888  SFRA_GUI_wordsLeftToGet                           
+0     0000c04b  SysCtl_delay                                      
+0     000837ad  SysCtl_isPLLValid                                 
+0     00084a16  SysCtl_selectOscSource                            
+0     0008498a  SysCtl_selectXTAL                                 
+0     00084e36  SysCtl_selectXTALSingleEnded                      
+0     000836a5  SysCtl_setClock                                   
+0     0000e980  TTPLPFC_HAL_GaNTemp_C                             
+0     000844ab  TTPLPFC_HAL_setPinsAsPWM                          
+0     000842e6  TTPLPFC_HAL_setupADC                              
+0     000840d4  TTPLPFC_HAL_setupBoardProtection                  
+0     000845e3  TTPLPFC_HAL_setupCMPSS                            
+0     0008426e  TTPLPFC_HAL_setupPWM                              
+0     000843ca  TTPLPFC_HAL_setupPWM_UpDownCountWithDeadband      
+0     000847dd  TTPLPFC_HAL_setupPWMforTrip                       
+0     00084fbe  TTPLPFC_HAL_setupRelayGPIO                        
+0     00083e52  TTPLPFC_HAL_setupTrigForADC                       
+0     00008048  TTPLPFC_ISR1_Loading                              
+0     0000804a  TTPLPFC_ISR1_LoadingMax                           
+0     00008042  TTPLPFC_ISR1_capCountMax                          
+0     00008468  TTPLPFC_ISR1_nestingCounter                       
+0     0000846a  TTPLPFC_ISR1_nests                                
+0     0000846e  TTPLPFC_ISR1_nestsAvg                             
+0     0000846c  TTPLPFC_ISR1_nestsMax                             
+0     0000803a  TTPLPFC_ISR1cap1Count                             
+0     00008044  TTPLPFC_ISR1cap1CountAvg                          
+0     0000803c  TTPLPFC_ISR1cap2Count                             
+0     0000803e  TTPLPFC_ISR1cap3Count                             
+0     00008040  TTPLPFC_ISR1cap4Count                             
+0     00008054  TTPLPFC_ISR2_Loading                              
+0     00008056  TTPLPFC_ISR2_LoadingAvg                           
+0     00008046  TTPLPFC_ISR2_LoadingAvg_accountingForNesting      
+0     0000804c  TTPLPFC_ISR2cap1Count                             
+0     0000804e  TTPLPFC_ISR2cap2Count                             
+0     00008050  TTPLPFC_ISR2cap3Count                             
+0     00008052  TTPLPFC_ISR2cap4Count                             
+0     00008438  TTPLPFC_acCosine                                  
+0     0000843a  TTPLPFC_acCosinePrev                              
+0     0000841c  TTPLPFC_acFreqAvg_Hz                              
+0     00008434  TTPLPFC_acSine                                    
+0     00008436  TTPLPFC_acSinePrev                                
+0     000083d6  TTPLPFC_ac_L_senseOffset_pu                       
+0     000083ce  TTPLPFC_ac_L_sensed_pu                            
+0     000083d8  TTPLPFC_ac_N_senseOffset_pu                       
+0     000083d0  TTPLPFC_ac_N_sensed_pu                            
+0     00008410  TTPLPFC_ac_curRms_sensed_Amps                     
+0     00008020  TTPLPFC_ac_cur_ref_inst_prev_pu                   
+0     0000801e  TTPLPFC_ac_cur_ref_inst_pu                        
+0     000083f0  TTPLPFC_ac_cur_ref_pu                             
+0     0000801a  TTPLPFC_ac_cur_sensed_Amps                        
+0     00008018  TTPLPFC_ac_cur_sensed_pu                          
+0     00008450  TTPLPFC_ac_sign_filtered                          
+0     0000841e  TTPLPFC_ac_volEma_sensed_Volts                    
+0     00008420  TTPLPFC_ac_volRmsEma_sensed_Volts                 
+0     00008414  TTPLPFC_ac_volRms_overVoltage_Volts               
+0     00008412  TTPLPFC_ac_volRms_sensed_Volts                    
+0     00008416  TTPLPFC_ac_volRms_underVoltage_Volts              
+0     000083da  TTPLPFC_ac_vol_senseOffset_pu                     
+0     000083d4  TTPLPFC_ac_vol_sensed_Volts                       
+0     00008470  TTPLPFC_ac_vol_sensed_buff                        
+0     000082b6  TTPLPFC_ac_vol_sensed_buff_index                  
+0     000083d2  TTPLPFC_ac_vol_sensed_pu                          
+0     0000841a  TTPLPFC_apparentPower_VA                          
+0     00008422  TTPLPFC_autoStartSlew                             
+0     000083c4  TTPLPFC_board_State                               
+0     000083c6  TTPLPFC_board_Status                              
+0     0000842e  TTPLPFC_clearTrip                                 
+0     0000842a  TTPLPFC_closeGiLoop                               
+0     0000842c  TTPLPFC_closeGvLoop                               
+0     0008443b  TTPLPFC_computeNotchFltrCoeff                     
+0     0000e320  TTPLPFC_dBuff1                                    
+0     0000e3e8  TTPLPFC_dBuff2                                    
+0     0000e4b0  TTPLPFC_dBuff3                                    
+0     0000e578  TTPLPFC_dBuff4                                    
+0     0000e6c8  TTPLPFC_dLog1                                     
+0     0000e6c0  TTPLPFC_dVal1                                     
+0     0000e6c2  TTPLPFC_dVal2                                     
+0     0000e6c4  TTPLPFC_dVal3                                     
+0     0000e6c6  TTPLPFC_dVal4                                     
+0     00008026  TTPLPFC_dbFED_SetValue_ticks                      
+0     00008036  TTPLPFC_dbRED_Max_ticks                           
+0     00008034  TTPLPFC_dbRED_Min_ticks                           
+0     00008028  TTPLPFC_dbRED_SetValue1_ticks                     
+0     0000802c  TTPLPFC_dbRED_SetValue2_ticks                     
+0     00008030  TTPLPFC_dbRED_SetValue3_ticks                     
+0     0000802a  TTPLPFC_dbRED_SetValue_Temp1_ticks                
+0     0000802e  TTPLPFC_dbRED_SetValue_Temp2_ticks                
+0     00008032  TTPLPFC_dbRED_SetValue_Temp3_ticks                
+0     00008024  TTPLPFC_dbRED_SetValue_Temp_ticks                 
+0     00008022  TTPLPFC_dbRED_SetValue_ticks                      
+0     00008428  TTPLPFC_deltaIref_pu                              
+0     00008400  TTPLPFC_duty1_pu                                  
+0     00008402  TTPLPFC_duty2_pu                                  
+0     00008466  TTPLPFC_dutySlew_pu                               
+0     0000840a  TTPLPFC_duty_DC_ref_final_pu                      
+0     00008408  TTPLPFC_duty_DC_ref_pu                            
+0     00008404  TTPLPFC_duty_clamp_high_pu                        
+0     00008406  TTPLPFC_duty_clamp_low_pu                         
+0     0000840c  TTPLPFC_duty_ref_pu                               
+0     00008432  TTPLPFC_firstTimeGvLoop                           
+0     0000e720  TTPLPFC_freqVect                                  
+0     000080e4  TTPLPFC_gi1                                       
+0     00008444  TTPLPFC_gi1_out                                   
+0     000083c0  TTPLPFC_gi1_out_ff_scale                          
+0     00008100  TTPLPFC_gi2                                       
+0     00008446  TTPLPFC_gi2_out                                   
+0     00008004  TTPLPFC_gi_Ki                                     
+0     00008008  TTPLPFC_gi_Ki_Ref                                 
+0     00008002  TTPLPFC_gi_Kp                                     
+0     00008006  TTPLPFC_gi_Kp_Ref                                 
+0     00082000  TTPLPFC_globalVariablesInit                       
+0     00008000  TTPLPFC_guiPowerStageStart                        
+0     00008001  TTPLPFC_guiPowerStageStop                         
+0     00008116  TTPLPFC_gv                                        
+0     00008448  TTPLPFC_gv_out                                    
+0     00008010  TTPLPFC_iL1_senseOffset_pu                        
+0     00008014  TTPLPFC_iL1_sensed_Amps                           
+0     0000800c  TTPLPFC_iL1_sensed_pu                             
+0     00008012  TTPLPFC_iL2_senseOffset_pu                        
+0     00008016  TTPLPFC_iL2_sensed_Amps                           
+0     0000800e  TTPLPFC_iL2_sensed_pu                             
+0     000083f2  TTPLPFC_inductor_voltage_drop_feedforward         
+0     0000843e  TTPLPFC_interleaving_State                        
+0     00008424  TTPLPFC_iref1_pu                                  
+0     00008426  TTPLPFC_iref2_pu                                  
+0     000083c2  TTPLPFC_lab                                       
+0     0000845e  TTPLPFC_manualStop                                
+0     00008458  TTPLPFC_nonLinearVoltageLoopFlag                  
+0     0000845a  TTPLPFC_nonLinearVoltageLoopFlagDelay             
+0     0000805e  TTPLPFC_notch1                                    
+0     00008080  TTPLPFC_notch2                                    
+0     00008092  TTPLPFC_notch_50Hz                                
+0     000080a4  TTPLPFC_notch_60Hz                                
+0     0000e75c  TTPLPFC_olMagVect                                 
+0     0000e798  TTPLPFC_olPhaseVect                               
+0     000082b8  TTPLPFC_phase1ScaleFactor                         
+0     000082ba  TTPLPFC_phase2ScaleFactor                         
+0     000082bc  TTPLPFC_phase3ScaleFactor                         
+0     0000e7d4  TTPLPFC_plantMagVect                              
+0     0000e810  TTPLPFC_plantPhaseVect                            
+0     00008418  TTPLPFC_powerFactor                               
+0     0000840e  TTPLPFC_powerRms_Watts                            
+0     00008038  TTPLPFC_pwm_SwState                               
+0     00008058  TTPLPFC_rgen                                      
+0     00008430  TTPLPFC_rlyConnect                                
+0     00084faf  TTPLPFC_runCoefficientsUpdate                     
+0     00085011  TTPLPFC_runSFRABackGroundTasks                    
+0     0008508b  TTPLPFC_setLabIndicatorVariable                   
+0     00083480  TTPLPFC_setupSFRA                                 
+0     0000e700  TTPLPFC_sfra1                                     
+0     00008180  TTPLPFC_sine_mains                                
+0     0000845c  TTPLPFC_softStartDeadBandFED                      
+0     000083fa  TTPLPFC_softStartDeadbandScalingFactor            
+0     000083f8  TTPLPFC_softstart_duty                            
+0     000081c0  TTPLPFC_spll1                                     
+0     00008140  TTPLPFC_spll2                                     
+0     00008240  TTPLPFC_spll3                                     
+0     00008454  TTPLPFC_spll_cosine                               
+0     000080c0  TTPLPFC_spll_notch_50Hz                           
+0     000080d2  TTPLPFC_spll_notch_60Hz                           
+0     00008452  TTPLPFC_spll_sine                                 
+0     00008440  TTPLPFC_state_slew                                
+0     00008442  TTPLPFC_state_slew_max                            
+0     000083dc  TTPLPFC_system_temp_pu                            
+0     000083de  TTPLPFC_system_vref_165_pu                        
+0     0000801c  TTPLPFC_thetaOffset_pu                            
+0     000083ec  TTPLPFC_threshold_NZC1                            
+0     000083ee  TTPLPFC_threshold_NZC2                            
+0     000083e8  TTPLPFC_threshold_PZC1                            
+0     000083ea  TTPLPFC_threshold_PZC2                            
+0     00008464  TTPLPFC_timedRunCounter_ms                        
+0     00008460  TTPLPFC_timedRun_flag                             
+0     00008462  TTPLPFC_timedRun_ms                               
+0     00084fd8  TTPLPFC_updateBoardStatus                         
+0     0000800a  TTPLPFC_updateCoefficientsCommand                 
+0     000083e4  TTPLPFC_vBusAvg_pu                                
+0     000083f6  TTPLPFC_vBusRefSlewed_pu                          
+0     000083f4  TTPLPFC_vBusRef_pu                                
+0     0000847a  TTPLPFC_vBusSensedBuff                            
+0     000082b4  TTPLPFC_vBusSensedBuffIndex                       
+0     000083fc  TTPLPFC_vBus_overVoltage_Volts                    
+0     0000844a  TTPLPFC_vBus_sensedFiltered                       
+0     0000844c  TTPLPFC_vBus_sensedFiltered_notch1                
+0     0000844e  TTPLPFC_vBus_sensedFiltered_notch2                
+0     000083ca  TTPLPFC_vBus_sensedOffset_pu                      
+0     000083cc  TTPLPFC_vBus_sensed_Volts                         
+0     000083c8  TTPLPFC_vBus_sensed_pu                            
+0     000083fe  TTPLPFC_vBus_underVoltage_Volts                   
+0     000083e6  TTPLPFC_vRmsAvg_pu                                
+0     000083e0  TTPLPFC_vbus2_pu                                  
+0     000083e2  TTPLPFC_vol2_pu                                   
+0     00008456  TTPLPFC_voltage_error                             
+0     0000843c  TTPLPFC_zeroCrossDetectFlag                       
+0     00084b40  XBAR_clearInputFlag                               
+0     000849b9  XBAR_getInputFlagStatus                           
+0     00084a6e  XBAR_setEPWMMuxConfig                             
+0     00084c00  XBAR_setOutputMuxConfig                           
+0     0000ea12  _SFRA_F32_amplitude                               
+0     0000ea20  _SFRA_F32_angle                                   
+0     0000ea1c  _SFRA_F32_count                                   
+0     0000ea18  _SFRA_F32_pointer                                 
+0     0000ea0e  _SFRA_F32_pointerStart                            
+0     0000ea1a  _SFRA_F32_preCount                                
+0     0000ea04  _SFRA_F32_rCosSum                                 
+0     0000ea02  _SFRA_F32_rSinSum                                 
+0     0000ea10  _SFRA_F32_reference                               
+0     0000ea14  _SFRA_F32_scalar                                  
+0     0000ea00  _SFRA_F32_state                                   
+0     0000ea01  _SFRA_F32_stateSlew                               
+0     0000ea16  _SFRA_F32_step                                    
+0     0000ea08  _SFRA_F32_uCosSum                                 
+0     0000ea06  _SFRA_F32_uSinSum                                 
+0     0000ea1e  _SFRA_F32_windowSamples                           
+0     0000ea0c  _SFRA_F32_yCosSum                                 
+0     0000ea0a  _SFRA_F32_ySinSum                                 
+0     0008451a  __SFRA_F32_collect                                
+0     00084b90  __SFRA_F32_inject                                 
+0     00081710  __TI_CINIT_Base                                   
+0     00081724  __TI_CINIT_Limit                                  
+0     00081724  __TI_CINIT_Warm                                   
+0     000816fc  __TI_Handler_Table_Base                           
+0     00081702  __TI_Handler_Table_Limit                          
+0     000007f8  __TI_STACK_END                                    
+abs   000003f8  __TI_STACK_SIZE                                   
+0     00084a99  __TI_auto_init_nobinit_nopinit                    
+0     0000e9dc  __TI_cleanup_ptr                                  
+0     000849e8  __TI_decompress_lzss                              
+0     00085053  __TI_decompress_none                              
+0     0000e9de  __TI_dtors_ptr                                    
+0     0000e9da  __TI_enable_exit_profile_output                   
+abs   ffffffff  __TI_pprof_out_hndl                               
+abs   ffffffff  __TI_prof_data_size                               
+abs   ffffffff  __TI_prof_data_start                              
+0     00085076  __TI_zero_init                                    
+0     00084ed1  __c28xabi_divf                                    
+n/a   UNDEFED   __c_args__                                        
+0     00000400  __stack                                           
+0     00084fe4  _args_main                                        
+0     00084eea  _c_int00                                          
+0     0000e9e0  _lock                                             
+0     0008504a  _nop                                              
+0     00085046  _register_lock                                    
+0     00085042  _register_unlock                                  
+0     0008509a  _system_post_cinit                                
+0     00085098  _system_pre_init                                  
+0     0000e9e2  _unlock                                           
+0     00084b17  abort                                             
+0     00080000  code_start                                        
+0     0000e9ae  ePWM                                              
+0     00084b19  exit                                              
+0     0000e9c0  index                                             
+abs   000875c5  isrcodefuncsLoadEnd                               
+abs   000005c5  isrcodefuncsLoadSize                              
+abs   00087000  isrcodefuncsLoadStart                             
+abs   0000cc05  isrcodefuncsRunEnd                                
+abs   000005c5  isrcodefuncsRunSize                               
+abs   0000c640  isrcodefuncsRunStart                              
+0     00084852  logf                                              
+0     00084b68  main                                              
+0     00084dc5  memcpy                                            
+0     00085063  memset                                            
+0     00084581  tanf                                              
+0     0000e87c  vTimer0                                           
+0     0000e97c  vTimer1                                           
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                                              
+----  -------   ----                                              
+0     00000400  __stack                                           
+0     000007f8  __TI_STACK_END                                    
+0     00008000  Cla1ConstLoadStart                                
+0     00008000  Cla1ConstRunStart                                 
+0     00008000  TTPLPFC_guiPowerStageStart                        
+0     00008001  TTPLPFC_guiPowerStageStop                         
+0     00008002  TTPLPFC_gi_Kp                                     
+0     00008004  TTPLPFC_gi_Ki                                     
+0     00008006  TTPLPFC_gi_Kp_Ref                                 
+0     00008008  TTPLPFC_gi_Ki_Ref                                 
+0     0000800a  TTPLPFC_updateCoefficientsCommand                 
+0     0000800c  TTPLPFC_iL1_sensed_pu                             
+0     0000800e  TTPLPFC_iL2_sensed_pu                             
+0     00008010  TTPLPFC_iL1_senseOffset_pu                        
+0     00008012  TTPLPFC_iL2_senseOffset_pu                        
+0     00008014  TTPLPFC_iL1_sensed_Amps                           
+0     00008016  TTPLPFC_iL2_sensed_Amps                           
+0     00008018  TTPLPFC_ac_cur_sensed_pu                          
+0     0000801a  TTPLPFC_ac_cur_sensed_Amps                        
+0     0000801c  TTPLPFC_thetaOffset_pu                            
+0     0000801e  TTPLPFC_ac_cur_ref_inst_pu                        
+0     00008020  TTPLPFC_ac_cur_ref_inst_prev_pu                   
+0     00008022  TTPLPFC_dbRED_SetValue_ticks                      
+0     00008024  TTPLPFC_dbRED_SetValue_Temp_ticks                 
+0     00008026  TTPLPFC_dbFED_SetValue_ticks                      
+0     00008028  TTPLPFC_dbRED_SetValue1_ticks                     
+0     0000802a  TTPLPFC_dbRED_SetValue_Temp1_ticks                
+0     0000802c  TTPLPFC_dbRED_SetValue2_ticks                     
+0     0000802e  TTPLPFC_dbRED_SetValue_Temp2_ticks                
+0     00008030  TTPLPFC_dbRED_SetValue3_ticks                     
+0     00008032  TTPLPFC_dbRED_SetValue_Temp3_ticks                
+0     00008034  TTPLPFC_dbRED_Min_ticks                           
+0     00008036  TTPLPFC_dbRED_Max_ticks                           
+0     00008038  TTPLPFC_pwm_SwState                               
+0     0000803a  TTPLPFC_ISR1cap1Count                             
+0     0000803c  TTPLPFC_ISR1cap2Count                             
+0     0000803e  TTPLPFC_ISR1cap3Count                             
+0     00008040  TTPLPFC_ISR1cap4Count                             
+0     00008042  TTPLPFC_ISR1_capCountMax                          
+0     00008044  TTPLPFC_ISR1cap1CountAvg                          
+0     00008046  TTPLPFC_ISR2_LoadingAvg_accountingForNesting      
+0     00008048  TTPLPFC_ISR1_Loading                              
+0     0000804a  TTPLPFC_ISR1_LoadingMax                           
+0     0000804c  TTPLPFC_ISR2cap1Count                             
+0     0000804e  TTPLPFC_ISR2cap2Count                             
+0     00008050  TTPLPFC_ISR2cap3Count                             
+0     00008052  TTPLPFC_ISR2cap4Count                             
+0     00008054  TTPLPFC_ISR2_Loading                              
+0     00008056  TTPLPFC_ISR2_LoadingAvg                           
+0     00008058  TTPLPFC_rgen                                      
+0     0000805e  TTPLPFC_notch1                                    
+0     00008080  TTPLPFC_notch2                                    
+0     00008092  TTPLPFC_notch_50Hz                                
+0     000080a4  TTPLPFC_notch_60Hz                                
+0     000080c0  TTPLPFC_spll_notch_50Hz                           
+0     000080d2  TTPLPFC_spll_notch_60Hz                           
+0     000080e4  TTPLPFC_gi1                                       
+0     00008100  TTPLPFC_gi2                                       
+0     00008116  TTPLPFC_gv                                        
+0     00008140  TTPLPFC_spll2                                     
+0     00008180  TTPLPFC_sine_mains                                
+0     000081c0  TTPLPFC_spll1                                     
+0     00008240  TTPLPFC_spll3                                     
+0     0000828a  CLLLC_pwmPhaseShiftPrimLegs_HiResticks            
+0     0000828b  CLLLC_modeChangeFlag                              
+0     0000828c  CLLLC_pwmISRTrig_ticks                            
+0     0000828d  CLLLC_pwmISRTrig_ticks_prev                       
+0     0000828e  CLLLC_enableLC                                    
+0     00008290  CLLLC_closeGiLoop                                 
+0     00008292  CLLLC_closeGvLoop                                 
+0     00008294  CLLLC_clearTrip                                   
+0     00008296  CLLLC_pwmFrequency_Hz                             
+0     00008298  CLLLC_pwmFrequencyPrev_Hz                         
+0     0000829a  CLLLC_pwmPeriodRef_pu                             
+0     0000829c  CLLLC_pwmPeriodSlewed_pu                          
+0     0000829e  CLLLC_iPrimSensed_pu                              
+0     000082a0  CLLLC_pwmDutyPrimRef_pu                           
+0     000082a2  CLLLC_pwmDeadBandREDPrimRef_ns                    
+0     000082a4  CLLLC_pwmDeadBandFEDPrimRef_ns                    
+0     000082a6  CLLLC_iSecSensed_pu                               
+0     000082a8  CLLLC_iSecRef_Amps                                
+0     000082aa  CLLLC_pwmDutySecRef_pu                            
+0     000082ac  CLLLC_pwmDutySecAdjust_pu                         
+0     000082ae  CLLLC_pwmPhaseShiftPrimSecRef_ns                  
+0     000082b0  CLLLC_pwmPhaseShiftPrimLegsRef_pu                 
+0     000082b2  CLLLC_pwmPhaseShiftPrimLegs_ns                    
+0     000082b4  TTPLPFC_vBusSensedBuffIndex                       
+0     000082b6  TTPLPFC_ac_vol_sensed_buff_index                  
+0     000082b8  TTPLPFC_phase1ScaleFactor                         
+0     000082ba  TTPLPFC_phase2ScaleFactor                         
+0     000082bc  TTPLPFC_phase3ScaleFactor                         
+0     000082be  CLLLC_startupDelay                                
+0     000082c0  CLLLC_pwmDeadBandREDSec_ticks                     
+0     000082c1  CLLLC_pwmDeadbandFEDSec_ticks                     
+0     000082c2  CLLLC_pwmPhaseShiftPrimSec_countDirection         
+0     000082c3  CLLLC_pwmPhaseShiftPrimLegs_countDirection        
+0     000082c4  CLLLC_Lab                                         
+0     000082c6  CLLLC_tripFlag                                    
+0     000082c8  CLLLC_pwmSwStateActive                            
+0     000082ca  CLLLC_pwmSwState                                  
+0     000082cc  CLLLC_powerFlowStateActive                        
+0     000082ce  CLLLC_powerFlowState                              
+0     000082d0  CLLLC_commandSentTo_AC_DC                         
+0     000082d2  CLLLC_ModulationMode                              
+0     000082d4  CLLLC_giOut                                       
+0     000082d6  CLLLC_giError                                     
+0     000082d8  CLLLC_giPartialComputedValue                      
+0     000082da  CLLLC_gvOut                                       
+0     000082dc  CLLLC_gvError                                     
+0     000082de  CLLLC_gvPartialComputedValue                      
+0     000082e0  CLLLC_pwmPeriod_pu                                
+0     000082e2  CLLLC_pwmPeriodMin_pu                             
+0     000082e4  CLLLC_pwmPeriodMax_pu                             
+0     000082e6  CLLLC_pwmPeriodMax_ticks                          
+0     000082e8  CLLLC_pwmPeriod_ticks                             
+0     000082ea  CLLLC_iPrimSensed_Amps                            
+0     000082ec  CLLLC_iPrimSensedOffset_pu                        
+0     000082ee  CLLLC_iPrimSensedCalIntercept_pu                  
+0     000082f0  CLLLC_iPrimSensedCalXvariable_pu                  
+0     000082f2  CLLLC_iPrimTankSensed_Amps                        
+0     000082f4  CLLLC_iPrimTankSensed_pu                          
+0     000082f6  CLLLC_iPrimTankSensedOffset_pu                    
+0     000082f8  CLLLC_iPrimTankSensedCalIntercept_pu              
+0     000082fa  CLLLC_iPrimTankSensedCalXvariable_pu              
+0     000082fc  CLLLC_vPrimSensed_Volts                           
+0     000082fe  CLLLC_vPrimSensed_pu                              
+0     00008300  CLLLC_vPrimSensedOffset_pu                        
+0     00008302  CLLLC_vPrimRef_Volts                              
+0     00008304  CLLLC_vPrimRef_pu                                 
+0     00008306  CLLLC_vPrimRefSlewed_pu                           
+0     00008308  CLLLC_pwmDutyPrim_pu                              
+0     0000830a  CLLLC_pwmDutyAPrim_ticks                          
+0     0000830c  CLLLC_pwmDutyBPrim_ticks                          
+0     0000830e  CLLLC_pwmDeadBandREDPrim_ticks                    
+0     00008310  CLLLC_pwmDeadBandFEDPrim_ticks                    
+0     00008312  CLLLC_iSecSenseDiag                               
+0     00008314  CLLLC_iSecSensed_Amps                             
+0     00008316  CLLLC_iSecSensedOffset_pu                         
+0     00008318  CLLLC_iSecSensedCalIntercept_pu                   
+0     0000831a  CLLLC_iSecSensedCalXvariable_pu                   
+0     0000831c  CLLLC_iSecRef_pu                                  
+0     0000831e  CLLLC_iSecRefSlewed_pu                            
+0     00008320  CLLLC_vSecSensed_Volts                            
+0     00008322  CLLLC_vSecSensed_pu                               
+0     00008324  CLLLC_vSecSensedOffset_pu                         
+0     00008326  CLLLC_vSecRef_Volts                               
+0     00008328  CLLLC_vSecRef_pu                                  
+0     0000832a  CLLLC_vSecRefSlewed_pu                            
+0     0000832c  CLLLC_pwmDutySec_pu                               
+0     0000832e  CLLLC_pwmDutyASec_ticks                           
+0     00008330  CLLLC_pwmDutyBSec_ticks                           
+0     00008332  CLLLC_pwmDeadBandREDSec_ns                        
+0     00008334  CLLLC_pwmDeadBandFEDSec_ns                        
+0     00008336  CLLLC_pwmPhaseShiftPrimSec_ns                     
+0     00008338  CLLLC_pwmPhaseShiftPrimSec_ticks                  
+0     0000833a  CLLLC_pwmPhaseShiftPrimLegs_pu                    
+0     0000833c  CLLLC_pwmPhaseShiftPrimLegs_ticks                 
+0     00008340  CLLLC_iPrimSensedAvg_pu                           
+0     00008344  CLLLC_iPrimTankSensedAvg_pu                       
+0     00008348  CLLLC_vPrimSensedAvg_pu                           
+0     0000834c  CLLLC_iSecSensedAvg_pu                            
+0     00008350  CLLLC_vSecSensedAvg_pu                            
+0     00008354  CLLLC_gi                                          
+0     00008380  CLLLC_gv                                          
+0     000083c0  TTPLPFC_gi1_out_ff_scale                          
+0     000083c2  TTPLPFC_lab                                       
+0     000083c4  TTPLPFC_board_State                               
+0     000083c6  TTPLPFC_board_Status                              
+0     000083c8  TTPLPFC_vBus_sensed_pu                            
+0     000083ca  TTPLPFC_vBus_sensedOffset_pu                      
+0     000083cc  TTPLPFC_vBus_sensed_Volts                         
+0     000083ce  TTPLPFC_ac_L_sensed_pu                            
+0     000083d0  TTPLPFC_ac_N_sensed_pu                            
+0     000083d2  TTPLPFC_ac_vol_sensed_pu                          
+0     000083d4  TTPLPFC_ac_vol_sensed_Volts                       
+0     000083d6  TTPLPFC_ac_L_senseOffset_pu                       
+0     000083d8  TTPLPFC_ac_N_senseOffset_pu                       
+0     000083da  TTPLPFC_ac_vol_senseOffset_pu                     
+0     000083dc  TTPLPFC_system_temp_pu                            
+0     000083de  TTPLPFC_system_vref_165_pu                        
+0     000083e0  TTPLPFC_vbus2_pu                                  
+0     000083e2  TTPLPFC_vol2_pu                                   
+0     000083e4  TTPLPFC_vBusAvg_pu                                
+0     000083e6  TTPLPFC_vRmsAvg_pu                                
+0     000083e8  TTPLPFC_threshold_PZC1                            
+0     000083ea  TTPLPFC_threshold_PZC2                            
+0     000083ec  TTPLPFC_threshold_NZC1                            
+0     000083ee  TTPLPFC_threshold_NZC2                            
+0     000083f0  TTPLPFC_ac_cur_ref_pu                             
+0     000083f2  TTPLPFC_inductor_voltage_drop_feedforward         
+0     000083f4  TTPLPFC_vBusRef_pu                                
+0     000083f6  TTPLPFC_vBusRefSlewed_pu                          
+0     000083f8  TTPLPFC_softstart_duty                            
+0     000083fa  TTPLPFC_softStartDeadbandScalingFactor            
+0     000083fc  TTPLPFC_vBus_overVoltage_Volts                    
+0     000083fe  TTPLPFC_vBus_underVoltage_Volts                   
+0     00008400  TTPLPFC_duty1_pu                                  
+0     00008402  TTPLPFC_duty2_pu                                  
+0     00008404  TTPLPFC_duty_clamp_high_pu                        
+0     00008406  TTPLPFC_duty_clamp_low_pu                         
+0     00008408  TTPLPFC_duty_DC_ref_pu                            
+0     0000840a  TTPLPFC_duty_DC_ref_final_pu                      
+0     0000840c  TTPLPFC_duty_ref_pu                               
+0     0000840e  TTPLPFC_powerRms_Watts                            
+0     00008410  TTPLPFC_ac_curRms_sensed_Amps                     
+0     00008412  TTPLPFC_ac_volRms_sensed_Volts                    
+0     00008414  TTPLPFC_ac_volRms_overVoltage_Volts               
+0     00008416  TTPLPFC_ac_volRms_underVoltage_Volts              
+0     00008418  TTPLPFC_powerFactor                               
+0     0000841a  TTPLPFC_apparentPower_VA                          
+0     0000841c  TTPLPFC_acFreqAvg_Hz                              
+0     0000841e  TTPLPFC_ac_volEma_sensed_Volts                    
+0     00008420  TTPLPFC_ac_volRmsEma_sensed_Volts                 
+0     00008422  TTPLPFC_autoStartSlew                             
+0     00008424  TTPLPFC_iref1_pu                                  
+0     00008426  TTPLPFC_iref2_pu                                  
+0     00008428  TTPLPFC_deltaIref_pu                              
+0     0000842a  TTPLPFC_closeGiLoop                               
+0     0000842c  TTPLPFC_closeGvLoop                               
+0     0000842e  TTPLPFC_clearTrip                                 
+0     00008430  TTPLPFC_rlyConnect                                
+0     00008432  TTPLPFC_firstTimeGvLoop                           
+0     00008434  TTPLPFC_acSine                                    
+0     00008436  TTPLPFC_acSinePrev                                
+0     00008438  TTPLPFC_acCosine                                  
+0     0000843a  TTPLPFC_acCosinePrev                              
+0     0000843c  TTPLPFC_zeroCrossDetectFlag                       
+0     0000843e  TTPLPFC_interleaving_State                        
+0     00008440  TTPLPFC_state_slew                                
+0     00008442  TTPLPFC_state_slew_max                            
+0     00008444  TTPLPFC_gi1_out                                   
+0     00008446  TTPLPFC_gi2_out                                   
+0     00008448  TTPLPFC_gv_out                                    
+0     0000844a  TTPLPFC_vBus_sensedFiltered                       
+0     0000844c  TTPLPFC_vBus_sensedFiltered_notch1                
+0     0000844e  TTPLPFC_vBus_sensedFiltered_notch2                
+0     00008450  TTPLPFC_ac_sign_filtered                          
+0     00008452  TTPLPFC_spll_sine                                 
+0     00008454  TTPLPFC_spll_cosine                               
+0     00008456  TTPLPFC_voltage_error                             
+0     00008458  TTPLPFC_nonLinearVoltageLoopFlag                  
+0     0000845a  TTPLPFC_nonLinearVoltageLoopFlagDelay             
+0     0000845c  TTPLPFC_softStartDeadBandFED                      
+0     0000845e  TTPLPFC_manualStop                                
+0     00008460  TTPLPFC_timedRun_flag                             
+0     00008462  TTPLPFC_timedRun_ms                               
+0     00008464  TTPLPFC_timedRunCounter_ms                        
+0     00008466  TTPLPFC_dutySlew_pu                               
+0     00008468  TTPLPFC_ISR1_nestingCounter                       
+0     0000846a  TTPLPFC_ISR1_nests                                
+0     0000846c  TTPLPFC_ISR1_nestsMax                             
+0     0000846e  TTPLPFC_ISR1_nestsAvg                             
+0     00008470  TTPLPFC_ac_vol_sensed_buff                        
+0     0000847a  TTPLPFC_vBusSensedBuff                            
+0     00009000  Cla1BackgroundTask                                
+0     00009000  Cla1ProgRunStart                                  
+0     000095a4  Cla1Task1                                         
+0     0000967e  Cla1Task2                                         
+0     00009690  Cla1Task3                                         
+0     000096a2  Cla1Task4                                         
+0     000096b4  Cla1Task5                                         
+0     000096c6  Cla1Task6                                         
+0     000096d8  Cla1Task7                                         
+0     0000c000  Flash_initModule                                  
+0     0000c04b  SysCtl_delay                                      
+0     0000c04f  ISR3                                              
+0     0000c640  ISR2_primToSecPowerFlow                           
+0     0000cbe3  ISR2_secToPrimPowerFlow                           
+0     0000e000  CLLLC_dBuff1                                      
+0     0000e0c8  CLLLC_dBuff2                                      
+0     0000e190  CLLLC_dBuff3                                      
+0     0000e258  CLLLC_dBuff4                                      
+0     0000e320  TTPLPFC_dBuff1                                    
+0     0000e3e8  TTPLPFC_dBuff2                                    
+0     0000e4b0  TTPLPFC_dBuff3                                    
+0     0000e578  TTPLPFC_dBuff4                                    
+0     0000e640  CLLLC_slewSCIcommand                              
+0     0000e642  CLLLC_dVal1                                       
+0     0000e644  CLLLC_dVal2                                       
+0     0000e646  CLLLC_dVal3                                       
+0     0000e648  CLLLC_dVal4                                       
+0     0000e64e  CLLLC_dLog1                                       
+0     0000e680  CLLLC_sfra1                                       
+0     0000e6a0  SFRA_GUI_arrayGetList                             
+0     0000e6c0  TTPLPFC_dVal1                                     
+0     0000e6c2  TTPLPFC_dVal2                                     
+0     0000e6c4  TTPLPFC_dVal3                                     
+0     0000e6c6  TTPLPFC_dVal4                                     
+0     0000e6c8  TTPLPFC_dLog1                                     
+0     0000e700  TTPLPFC_sfra1                                     
+0     0000e720  TTPLPFC_freqVect                                  
+0     0000e75c  TTPLPFC_olMagVect                                 
+0     0000e798  TTPLPFC_olPhaseVect                               
+0     0000e7d4  TTPLPFC_plantMagVect                              
+0     0000e810  TTPLPFC_plantPhaseVect                            
+0     0000e84c  Alpha_State_Ptr                                   
+0     0000e84e  A_Task_Ptr                                        
+0     0000e850  B_Task_Ptr                                        
+0     0000e852  C_Task_Ptr                                        
+0     0000e854  CLLLC_ISR2cap1Count                               
+0     0000e856  CLLLC_ISR2cap2Count                               
+0     0000e858  CLLLC_ISR2cap3Count                               
+0     0000e85a  CLLLC_ISR2cap4Count                               
+0     0000e85c  CLLLC_ISR3cap1Count                               
+0     0000e85e  CLLLC_ISR3cap2Count                               
+0     0000e860  CLLLC_ISR3cap3Count                               
+0     0000e862  CLLLC_ISR3cap4Count                               
+0     0000e864  CLLLC_ISR2_Loading                                
+0     0000e866  CLLLC_ISR2_LoadingMax                             
+0     0000e868  CLLLC_ISR3_Loading                                
+0     0000e86a  CLLLC_ISR3_LoadingAvg                             
+0     0000e86c  OBC_7_4KW_ISR2_nestingCounter                     
+0     0000e86e  OBC_7_4KW_ISR2_nests                              
+0     0000e870  OBC_7_4KW_ISR2_nestsMax                           
+0     0000e872  OBC_7_4KW_ISR2_nestsAvg                           
+0     0000e874  OBC_7_4KW_ISR3_LoadingAvg_accountingForNesting    
+0     0000e876  OBC_7_4KW_ISR3_LoadingAvgMax_accountingForNesting 
+0     0000e87c  vTimer0                                           
+0     0000e880  SFRA_GUI_commsOKflg                               
+0     0000e881  SFRA_GUI_serialCommsTimer                         
+0     0000e882  SFRA_GUI_lowByteFlag                              
+0     0000e883  SFRA_GUI_sendTaskPtr                              
+0     0000e884  SFRA_GUI_rxChar                                   
+0     0000e885  SFRA_GUI_rxWord                                   
+0     0000e886  SFRA_GUI_taskDoneFlag                             
+0     0000e887  SFRA_GUI_numWords                                 
+0     0000e888  SFRA_GUI_wordsLeftToGet                           
+0     0000e889  SFRA_GUI_dataOut16                                
+0     0000e88a  SFRA_GUI_rcvTskPtrShdw                            
+0     0000e88b  SFRA_GUI_delayer                                  
+0     0000e88c  SFRA_GUI_memGetPtr                                
+0     0000e88d  SFRA_GUI_memGetAmount                             
+0     0000e88e  SFRA_GUI_memSetPtr                                
+0     0000e88f  SFRA_GUI_led_flag                                 
+0     0000e890  SFRA_GUI_led_gpio                                 
+0     0000e891  SFRA_GUI_sweep_start                              
+0     0000e892  SFRA_GUI_rcvTaskPointer                           
+0     0000e894  SFRA_GUI_sci_base_addr                            
+0     0000e896  SFRA_GUI_dataOut32                                
+0     0000e898  SFRA_GUI_memDataPtr16                             
+0     0000e89a  SFRA_GUI_memDataPtr32                             
+0     0000e89c  SFRA_GUI_memGetAddress                            
+0     0000e89e  SFRA_GUI_memSetValue                              
+0     0000e8a0  SFRA_GUI_temp                                     
+0     0000e8a2  SFRA_GUI_cmdDispatcher                            
+0     0000e8c2  SFRA_GUI_dataSetList                              
+0     0000e8e2  SFRA_GUI_varGetList                               
+0     0000e902  SFRA_GUI_varSetBtnList                            
+0     0000e922  SFRA_GUI_varSetSldrList                           
+0     0000e942  SFRA_GUI_varSetTxtList                            
+0     0000e962  MEP_ScaleFactor                                   
+0     0000e964  CLLLC_HAL_GaNTemp_C                               
+0     0000e97c  vTimer1                                           
+0     0000e980  TTPLPFC_HAL_GaNTemp_C                             
+0     0000e998  MEP_SF                                            
+0     0000e9a1  SFRA_GUI_cmdPacket                                
+0     0000e9a7  SFO_CAL                                           
+0     0000e9ac  CLLLC_dlogTrigger                                 
+0     0000e9ae  ePWM                                              
+0     0000e9c0  index                                             
+0     0000e9da  __TI_enable_exit_profile_output                   
+0     0000e9dc  __TI_cleanup_ptr                                  
+0     0000e9de  __TI_dtors_ptr                                    
+0     0000e9e0  _lock                                             
+0     0000e9e2  _unlock                                           
+0     0000ea00  _SFRA_F32_state                                   
+0     0000ea01  _SFRA_F32_stateSlew                               
+0     0000ea02  _SFRA_F32_rSinSum                                 
+0     0000ea04  _SFRA_F32_rCosSum                                 
+0     0000ea06  _SFRA_F32_uSinSum                                 
+0     0000ea08  _SFRA_F32_uCosSum                                 
+0     0000ea0a  _SFRA_F32_ySinSum                                 
+0     0000ea0c  _SFRA_F32_yCosSum                                 
+0     0000ea0e  _SFRA_F32_pointerStart                            
+0     0000ea10  _SFRA_F32_reference                               
+0     0000ea12  _SFRA_F32_amplitude                               
+0     0000ea14  _SFRA_F32_scalar                                  
+0     0000ea16  _SFRA_F32_step                                    
+0     0000ea18  _SFRA_F32_pointer                                 
+0     0000ea1a  _SFRA_F32_preCount                                
+0     0000ea1c  _SFRA_F32_count                                   
+0     0000ea1e  _SFRA_F32_windowSamples                           
+0     0000ea20  _SFRA_F32_angle                                   
+0     0000f000  FPU32LOG2                                         
+0     0000f002  FPU32INVLOG10                                     
+0     0000f004  FPU32EXPBIAS                                      
+0     0000f006  FPU32LOG_TABLE_MASK1                              
+0     0000f008  FPU32LOG_TABLE_MASK2                              
+0     0000f00a  FPU32logTable                                     
+0     0000f0d0  FPU32logTableEnd                                  
+0     00080000  code_start                                        
+0     00081640  DCL_runPI_C1                                      
+0     00081678  DCL_runDF22_C1                                    
+0     000816a8  DCL_runPI_C4                                      
+0     000816fc  __TI_Handler_Table_Base                           
+0     00081702  __TI_Handler_Table_Limit                          
+0     00081710  __TI_CINIT_Base                                   
+0     00081724  __TI_CINIT_Limit                                  
+0     00081724  __TI_CINIT_Warm                                   
+0     00082000  TTPLPFC_globalVariablesInit                       
+0     00082570  CLLLC_HAL_setupSynchronousRectificationAction     
+0     000828ed  CLLLC_initGlobalVariables                         
+0     00082b53  SFRA_F32_runBackgroundTask                        
+0     00082d53  SFO                                               
+0     00082f44  SFRA_F32_updateInjectionAmplitude                 
+0     00082f4c  SFRA_F32_resetFreqRespArray                       
+0     0008306d  SFRA_F32_reset                                    
+0     000830a1  SFRA_F32_initFreqArrayWithLogSteps                
+0     000830cb  SFRA_F32_config                                   
+0     0008312d  CLLLC_runISR3                                     
+0     00083312  CLLLC_HAL_setupPWM                                
+0     00083480  OBC_7_4KW_setupSFRA                               
+0     00083480  TTPLPFC_setupSFRA                                 
+0     0008359d  SFRA_GUI_getArray                                 
+0     0008359d  SFRA_GUI_getVariable                              
+0     0008359d  SFRA_GUI_sendData                                 
+0     000836a5  SysCtl_setClock                                   
+0     000837ad  SysCtl_isPLLValid                                 
+0     000838ac  SFRA_GUI_config                                   
+0     000839a5  CLLLC_HAL_setupTrigForADC                         
+0     00083a83  Device_enableAllPeripherals                       
+0     00083b56  CLLLC_HAL_setupHRPWMinUpDownCountModeWithDeadBand 
+0     00083c1d  CLLLC_HAL_setupPWMpins                            
+0     00083ce4  CLLLC_changeSynchronousRectifierPwmBehavior       
+0     00083da0  CLLLC_HAL_setupBoardProtection                    
+0     00083e52  TTPLPFC_HAL_setupTrigForADC                       
+0     00083f01  OBC_7_4KW_setupInterrupt                          
+0     00083fa4  CLLLC_HAL_setupGPIOs                              
+0     00084042  CLLLC_HAL_setupCLA                                
+0     000840d4  TTPLPFC_HAL_setupBoardProtection                  
+0     00084165  CLLLC_HAL_setupADC                                
+0     000841f3  CLLLC_HAL_setupHRPWMinUpDownCount2ChAsymmetricMode
+0     0008426e  TTPLPFC_HAL_setupPWM                              
+0     000842e6  TTPLPFC_HAL_setupADC                              
+0     00084359  CLLLC_HAL_setupDevice                             
+0     00084359  OBC_7_4KW_setupDevice                             
+0     000843ca  TTPLPFC_HAL_setupPWM_UpDownCountWithDeadband      
+0     0008443b  TTPLPFC_computeNotchFltrCoeff                     
+0     000844ab  TTPLPFC_HAL_setPinsAsPWM                          
+0     0008451a  __SFRA_F32_collect                                
+0     00084581  tanf                                              
+0     000845e3  TTPLPFC_HAL_setupCMPSS                            
+0     00084638  SFRA_GUI_lifePulseTsk                             
+0     00084687  CLLLC_updateBoardStatus                           
+0     000846d3  Device_init                                       
+0     00084718  GPIO_setAnalogMode                                
+0     0008475d  Interrupt_initModule                              
+0     0008479e  GPIO_setPadConfig                                 
+0     000847dd  TTPLPFC_HAL_setupPWMforTrip                       
+0     00084819  CLLLC_HAL_setupSynchronousRectificationActionDebug
+0     00084852  logf                                              
+0     0008488a  SFRA_GUI_getCmdByte                               
+0     000848c1  Interrupt_enable                                  
+0     000848f7  CLLLC_HAL_setupPWMinUpDownCountMode               
+0     0008492b  GPIO_setPinConfig                                 
+0     0008495b  CLLLC_HAL_setupECAPforDutyCapture                 
+0     0008498a  SysCtl_selectXTAL                                 
+0     000849b9  XBAR_getInputFlagStatus                           
+0     000849e8  __TI_decompress_lzss                              
+0     00084a16  SysCtl_selectOscSource                            
+0     00084a43  SFRA_GUI_getData                                  
+0     00084a6e  XBAR_setEPWMMuxConfig                             
+0     00084a99  __TI_auto_init_nobinit_nopinit                    
+0     00084ac4  CLLLC_HAL_setupECAPinPWMMode                      
+0     00084aee  SFRA_GUI_setData32                                
+0     00084b17  C$$EXIT                                           
+0     00084b17  abort                                             
+0     00084b19  exit                                              
+0     00084b40  XBAR_clearInputFlag                               
+0     00084b68  main                                              
+0     00084b90  __SFRA_F32_inject                                 
+0     00084bb6  SFRA_GUI_echoCmdByte                              
+0     00084bdb  SFRA_GUI_echoSizeByte                             
+0     00084c00  XBAR_setOutputMuxConfig                           
+0     00084c25  SCI_setConfig                                     
+0     00084c48  GPIO_setMasterCore                                
+0     00084c6a  GPIO_setQualificationMode                         
+0     00084c8c  MemCfg_setLSRAMMasterSel                          
+0     00084cad  OBC_7_4KW_initGlobalVariables                     
+0     00084cce  GPIO_setDirectionMode                             
+0     00084cee  SFRA_GUI_cmdInterpreter                           
+0     00084d0e  SFRA_GUI_echoDataByte                             
+0     00084d2e  CLLLC_HAL_setupECAPforGaNTemp                     
+0     00084d2e  OBC_7_4KW_setupGaNTempReading                     
+0     00084d4d  OBC_7_4KW_setupPWM                                
+0     00084d8b  SFRA_GUI_getDataByte                              
+0     00084da8  SFRA_GUI_getSizeByte                              
+0     00084dc5  memcpy                                            
+0     00084de2  CLA_setTriggerSource                              
+0     00084dfe  SCI_clearInterruptStatus                          
+0     00084e1a  SFRA_GUI_packWord                                 
+0     00084e36  SysCtl_selectXTALSingleEnded                      
+0     00084e52  ADC_setOffsetTrimAll                              
+0     00084e6c  SCI_enableInterrupt                               
+0     00084e86  ADC_setVREF                                       
+0     00084e9f  CMPSS_configFilterHigh                            
+0     00084eb8  CMPSS_configFilterLow                             
+0     00084ed1  __c28xabi_divf                                    
+0     00084eea  _c_int00                                          
+0     00084f03  A0                                                
+0     00084f1b  B0                                                
+0     00084f33  CMPSS_configLatchOnPWMSYNC                        
+0     00084f48  Interrupt_initVectorTable                         
+0     00084f5d  SFRA_GUI_setButton                                
+0     00084f6e  SFRA_GUI_setSlider                                
+0     00084f7f  SFRA_GUI_setText                                  
+0     00084f90  Device_initGPIO                                   
+0     00084fa0  SFRA_GUI_runSerialHostComms                       
+0     00084faf  TTPLPFC_runCoefficientsUpdate                     
+0     00084fbe  TTPLPFC_HAL_setupRelayGPIO                        
+0     00084fcc  CLLLC_HAL_toggleLED1                              
+0     00084fd8  TTPLPFC_updateBoardStatus                         
+0     00084fe4  _args_main                                        
+0     00084ff0  A1                                                
+0     00084ffb  OBC_7_4KW_setupActiveSyncRectCLLLC                
+0     00085006  OBC_7_4KW_setupBoardProtection                    
+0     00085011  TTPLPFC_runSFRABackGroundTasks                    
+0     0008501c  B1                                                
+0     00085026  B3                                                
+0     00085030  CLLLC_HAL_disablePWMClkCounting                   
+0     00085030  OBC_7_4KW_disablePWMClkCounting                   
+0     00085039  OBC_7_4KW_setupADC                                
+0     00085042  _register_unlock                                  
+0     00085046  _register_lock                                    
+0     0008504a  _nop                                              
+0     0008504b  CLLLC_HAL_enablePWMClkCounting                    
+0     0008504b  OBC_7_4KW_enablePWMClkCounting                    
+0     00085053  __TI_decompress_none                              
+0     00085063  memset                                            
+0     0008506a  B2                                                
+0     00085070  CPUTimer_setEmulationMode                         
+0     00085076  __TI_zero_init                                    
+0     0008507c  CLLLC_setBuildLevelIndicatorVariable              
+0     00085081  OBC_7_4KW_setupGPIO                               
+0     00085086  SFRA_GUI_spareTsk08                               
+0     0008508b  TTPLPFC_setLabIndicatorVariable                   
+0     00085098  _system_pre_init                                  
+0     0008509a  _system_post_cinit                                
+0     00086000  Cla1ProgLoadStart                                 
+abs   00000000  Cla1ConstLoadSize                                 
+abs   000003f8  __TI_STACK_SIZE                                   
+abs   000005c5  isrcodefuncsLoadSize                              
+abs   000005c5  isrcodefuncsRunSize                               
+abs   0000063d  RamfuncsLoadSize                                  
+abs   0000063d  RamfuncsRunSize                                   
+abs   000006ea  Cla1ProgLoadSize                                  
+abs   0000c000  RamfuncsRunStart                                  
+abs   0000c63d  RamfuncsRunEnd                                    
+abs   0000c640  isrcodefuncsRunStart                              
+abs   0000cc05  isrcodefuncsRunEnd                                
+abs   00081000  RamfuncsLoadStart                                 
+abs   0008163d  RamfuncsLoadEnd                                   
+abs   00087000  isrcodefuncsLoadStart                             
+abs   000875c5  isrcodefuncsLoadEnd                               
+abs   ffffffff  __TI_pprof_out_hndl                               
+abs   ffffffff  __TI_prof_data_size                               
+abs   ffffffff  __TI_prof_data_start                              
+n/a   UNDEFED   __c_args__                                        
+
+[558 symbols]

@@ -1,0 +1,102 @@
+TMS320C2000 Assembler PC v22.6.0 Tue Dec 20 15:55:13 2022
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+../libraries/DCL/DCL_PI_L1.asm                                       PAGE    1
+
+       1              ; DCL_PI_L1.asm - Series PI controller
+       2              ;
+       3              ; Copyright (C) 2020 Texas Instruments Incorporated - http://www.ti.com/
+       4              ; ALL RIGHTS RESERVED 
+       5              
+       6                        .if $defined(__TI_EABI__)
+       7                              .if __TI_EABI__
+       8                              .asg    DCL_runPI_L1, _DCL_runPI_L1
+       9                              .endif
+      10                    .endif
+      11              
+      12                              .global _DCL_runPI_L1
+      13                              .def    __cla_DCL_runPI_L1_sp
+      14              
+      15        0005  SIZEOF_LFRAME   .set    5
+      16        0000  LFRAME_MR3              .set    0
+      17              
+      18 00000000       __cla_DCL_runPI_L1_sp   .usect ".scratchpad:Cla1Prog:_DCL_runPI_L1", SIZEOF_LFRAME, 0, 1
+      19                              .asg     __cla_DCL_runPI_L1_sp, LFRAME
+      20              
+      21 00000000                       .sect   "Cla1Prog:_DCL_runPI_L1"
+      22              
+      23                              .align  2
+      24              
+      25              ; C prototype:
+      26              ; float DCL_runPI_L1(DCL_PI_CLA *p, float32_t rk, float32_t yk)
+      27              ; argument 1 = *p : 32-bit PI structure address [MAR0]
+      28              ; argument 2 = rk : 32-bit floating-point reference [MR0]
+      29              ; argument 3 = yk : 32-bit floating-point feedback [MR1]
+      30              ; return = uk : 32-bit floating-point [MR0]
+      31              
+      32 00000000       _DCL_runPI_L1:
+      33              ;               MDEBUGSTOP
+      34 00000000 8080                  MSETFLG         RNDF32=1                                        ; round to nearest even
+         00000001 79C0 
+      35 00000002 0000!                 MMOV32          @LFRAME + LFRAME_MR3, MR3       ; save MR3
+         00000003 74F0 
+      36              
+      37              ;*** servo error ***
+      38 00000004 0012                  MSUBF32         MR2, MR0, MR1                           ; MR2 = v1
+         00000005 7C40 
+      39              
+      40              ;*** proportional path ***
+      41 00000006 0002                  MMOV32          MR1, *MAR0[2]++                         ; MR1 = Kpa
+         00000007 73D1 
+      42 00000008 0008                  MMPYF32         MR2, MR1, MR2                           ; MR2 = v2
+         00000009 0991 
+      43              
+      44              ;*** integral path ***
+      45              ||              MMOV32          MR1, *MAR0[8]++                         ; MR1 = Kia
+      46 0000000a FFFA                  MMPYF32         MR0, MR2, MR1                           ; MR0 = v3
+         0000000b 0611 
+      47              ||              MMOV32          MR1, *MAR0[-6]++                        ; MR1 = i6
+      48 0000000c 0000                  MMPYF32         MR0, MR0, MR1                           ; MR0 = v8
+         0000000d 0411 
+TMS320C2000 Assembler PC v22.6.0 Tue Dec 20 15:55:13 2022
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+../libraries/DCL/DCL_PI_L1.asm                                       PAGE    2
+
+      49              ||              MMOV32          MR1, *MAR0                                      ; MR1 = i10
+      50 0000000e 0010                  MADDF32         MR0, MR0, MR1                           ; MR0 = v4
+         0000000f 7C20 
+      51 00000010 0002                  MMOV32          *MAR0[2]++, MR0                         ; save i10
+         00000011 74C1 
+      52 00000012 0020                  MADDF32         MR0, MR0, MR2                           ; MR0 = v5
+         00000013 7C20 
+      53              
+      54              ;*** output saturation ***
+      55 00000014 0000                  MMOVF32         MR2, #0.0f                                      ; MR2 = 0.0f
+         00000015 7842 
+      56 00000016 3F80                  MMOVF32         MR3, #1.0f                                      ; MR3 = 1.0f
+         00000017 7843 
+      57 00000018 0002                  MMOV32          MR1, *MAR0[2]++                         ; MR1 = Umaxa
+         00000019 73D1 
+      58 0000001a 0004                  MMINF32         MR0, MR1                                        ; MR0 = sat+
+         0000001b 7D40 
+      59 0000001c 002B                  MMOV32          MR3, MR2, GT                            ; MR3 = v6
+         0000001d 7AC0 
+      60 0000001e 0002                  MMOV32          MR1, *MAR0[2]++                         ; MR1 = Umina
+         0000001f 73D1 
+      61 00000020 0004                  MMAXF32         MR0, MR1                                        ; MR0 = sat-
+         00000021 7D20 
+      62 00000022 0000                  MRCNDD          UNC                                                     ; return call
+         00000023 79AE 
+      63 00000024 004B                  MMOV32          MR3, MR2, LT                            ; MR3 = v6
+         00000025 7AC0 
+      64 00000026 0000                  MMOV32          *MAR0, MR3                                      ; save i6
+         00000027 74F1 
+      65 00000028 0000!                 MMOV32          MR3, @LFRAME + LFRAME_MR3       ; restore MR3
+         00000029 73F0 
+      66              
+      67                              .unasg  LFRAME
+      68              
+      69              ; end of file
+
+No Assembly Errors, No Assembly Warnings
